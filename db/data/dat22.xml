@@ -103,7 +103,7 @@
 			<ObjectId>Darkness Bolt</ObjectId>
 			<Damage>16</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	

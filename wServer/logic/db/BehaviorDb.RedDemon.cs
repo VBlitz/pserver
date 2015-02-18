@@ -57,8 +57,8 @@ namespace wServer.logic
                             Tuple.Create(0.02, (ILoot)new ItemLoot("Steel Helm")),
                             Tuple.Create(0.5, (ILoot)HpPotionLoot.Instance),
                             Tuple.Create(0.5, (ILoot)MpPotionLoot.Instance),
-                            Tuple.Create(0.01, (ILoot)new StatPotionLoot(StatPotion.Spd)),
-                            Tuple.Create(0.01, (ILoot)new StatPotionLoot(StatPotion.Att))
+                            Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Spd)),
+                            Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Att))
                         ))
                     )
                 ))

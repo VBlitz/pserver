@@ -22,14 +22,20 @@ namespace wServer.realm.entities.player
             AddAdvCombo("Pyramid Leather Armor", 12000, "Hydra Skin Armor", "Wyrmhide Armor", "Leviathan Armor");
 
             // ---- NORMAL COMBOS ---- //
-            AddCombo("Anatis Staff", 1000, "Energy Staff", "Wand of the Bulwark");
-            AddCombo("Chicken Leg of Doom", 1000, "Anatis Staff", "Dagger of Dire Hatred");
+            AddCombo("Anatis Staff", 200, "Energy Staff", "Wand of the Bulwark");
+            AddCombo("Chicken Leg of Doom", 100, "Anatis Staff", "Dagger of Dire Hatred");
             AddCombo("Potion of Oryx", 10, "Potion of Dexterity", "Potion of Speed", "Potion of Wisdom", "Potion of Vitality", "Potion of Defense", "Potion of Attack", "Potion of Life", "Potion of Mana");
             AddCombo("Dagger of Dire Hatred", 200, "Dagger of Foul Malevolence", "Dagger of Sinister Deeds");
             AddCombo("Sword of Majesty", 200, "Sword of Acclaim", "Sword of Splendor");
+            AddCombo("Bow of Deep Enchantment", 200, "Bow of Covert Havens", "Bow of Mystical Energy");
             AddCombo("Wand of Retribution", 200, "Wand of Recompense", "Wand of Evocation");
             AddCombo("Staff of the Fundamental Core", 200, "Staff of the Vital Unity", "Staff of the Cosmic Whole");
-            AddCombo("Thousand Shot", 1000, "Doom Bow", "Coral Bow");
+            AddCombo("Thousand Shot", 450, "Doom Bow", "Coral Bow");
+            AddCombo("Robe of the Wise Magician", 450, "Robe of the Ancient Intellect", "Ring of the Sphinx");
+            AddCombo("Robe of the Ancient Battlemage", 450, "Robe of the Ancient Intellect", "Ring of the Pyramid");
+            AddCombo("Tattered Robe", 450, "Robe of the Moon Wizard", "Ring of the Nile");
+            AddCombo("Staff of Unlimited Patience", 350, "Wand of the Bulwark", "Staff of Necrotis Arcana");
+            AddCombo("Staff of Imminent Doom", 500, "Demon Blade", "Staff of the Fundamental Core");
             //Abilities (T7, T6)
             AddCombo("Shield of Death", 500, "Magma Shield", "Colossus Shield");
             AddCombo("Skull of the Undead King", 500, "Souleater Skull", "Bloodsucker Skull");

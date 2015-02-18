@@ -659,7 +659,7 @@
     <Activate totalDamage="300" duration="1.5">StasisBlast</Activate>
     <Activate radius="3" totalDamage="500" condEffect="Dazed" condDuration="5" duration="1">PoisonGrenade</Activate>
   </Object>
-  <Object type="0xf1d" id="Bronze Daggers">
+  <Object type="0xf1d" id="Brass Lance">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -668,22 +668,21 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>0</Tier>
-    <Description>Twin bronze daggers, nothing special.</Description>
+    <Description>A lance forged from brass.</Description>
     <RateOfFire>1</RateOfFire>
     <Sound>weapon/blunt_dagger</Sound>
     <Projectile>
       <ObjectId>Bronze Proj</ObjectId>
       <Speed>180</Speed>
       <MinDamage>30</MinDamage>
-      <MaxDamage>80</MaxDamage>
+      <MaxDamage>120</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
     </Projectile>
     <BagType>1</BagType>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf1e" id="Invert Blades">
+  <Object type="0xf1e" id="Iron Lance">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -692,22 +691,21 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>1</Tier>
-    <Description>Twin steel blades with hilts of opposit colours, somehow making them more deadly.</Description>
+    <Description>A powerful lance made of iron.</Description>
     <RateOfFire>1</RateOfFire>
     <Sound>weapon/dirk</Sound>
     <Projectile>
       <ObjectId>Steel Proj</ObjectId>
       <Speed>180</Speed>
-      <MinDamage>35</MinDamage>
-      <MaxDamage>90</MaxDamage>
+      <MinDamage>30</MinDamage>
+      <MaxDamage>140</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
     </Projectile>
     <BagType>1</BagType>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf1f" id="Dusky Blades">
+  <Object type="0xf1f" id="Bronze Lance">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -722,151 +720,7 @@
     <Projectile>
       <ObjectId>Bronze Proj</ObjectId>
       <Speed>180</Speed>
-      <MinDamage>45</MinDamage>
-      <MaxDamage>100</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf20" id="Duo Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd3</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>3</Tier>
-    <Description>Twin blades forged together, perfectly harmonized with each other.</Description>
-    <RateOfFire>1</RateOfFire>
-    <Sound>weapon/dirk</Sound>
-    <Projectile>
-      <ObjectId>Steel Proj</ObjectId>
-      <Speed>180</Speed>
-      <MinDamage>60</MinDamage>
-      <MaxDamage>110</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf21" id="Silver Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd4</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>4</Tier>
-    <Description>Twin silver blades, forged for the Great Werewolf Hunters of the Wandering Planes.</Description>
-    <RateOfFire>1</RateOfFire>
-    <Sound>weapon/dirk</Sound>
-    <Projectile>
-      <ObjectId>Silver Proj</ObjectId>
-      <Speed>180</Speed>
-      <MinDamage>70</MinDamage>
-      <MaxDamage>125</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf22" id="Half Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd5</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>5</Tier>
-    <Description>Twin blades, forged from one broken legendary dagger.</Description>
-    <RateOfFire>1</RateOfFire>
-    <Sound>weapon/dirk</Sound>
-    <Projectile>
-      <ObjectId>Steel Proj</ObjectId>
-      <Speed>180</Speed>
-      <MinDamage>70</MinDamage>
-      <MaxDamage>140</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf23" id="Obsidian Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd6</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>6</Tier>
-    <Description>Twin blades made from the finest of obsidian, allowing them to fire twice as fast as a standard pair of blades.</Description>
-    <RateOfFire>2</RateOfFire>
-    <Sound>weapon/obsidian_dagger</Sound>
-    <Projectile>
-      <ObjectId>Black Proj</ObjectId>
-      <Speed>200</Speed>
-      <MinDamage>70</MinDamage>
-      <MaxDamage>100</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf24" id="Mithril Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd7</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>7</Tier>
-    <Description>Twin blades forged from the and magical metal mithril and crested with nuggets of gold.</Description>
-    <RateOfFire>1</RateOfFire>
-    <Sound>weapon/mithril_dagger</Sound>
-    <Projectile>
-      <ObjectId>Mithril Proj</ObjectId>
-      <Speed>160</Speed>
-      <MinDamage>80</MinDamage>
-      <MaxDamage>150</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
-    </Projectile>
-    <BagType>1</BagType>
-    <NumProjectiles>1</NumProjectiles>
-    <OldSound>daggerSwing</OldSound>
-  </Object>
-  <Object type="0xf25" id="Infinity Blades">
-    <Class>Equipment</Class>
-    <Item/>
-    <Texture>
-      <File>lofiObj5</File>
-      <Index>0xd8</Index>
-    </Texture>
-    <SlotType>26</SlotType>
-    <Tier>8</Tier>
-    <Description>Two blades, one made of solid water, and the other made of solid fire.</Description>
-    <RateOfFire>1</RateOfFire>
-    <Sound>weapon/fire_dagger</Sound>
-    <Projectile>
-      <ObjectId>Infinity Proj</ObjectId>
-      <Speed>160</Speed>
-      <MinDamage>90</MinDamage>
+      <MinDamage>30</MinDamage>
       <MaxDamage>160</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
       <MultiHit/>
@@ -875,7 +729,145 @@
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf26" id="Rage Claw Blades">
+  <Object type="0xf20" id="Wooden Spear">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd3</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>3</Tier>
+    <Description>A wooden spear withan iron tip.</Description>
+    <RateOfFire>0.8</RateOfFire>
+    <Sound>weapon/dirk</Sound>
+    <Projectile>
+      <ObjectId>Steel Proj</ObjectId>
+      <Speed>180</Speed>
+      <MinDamage>30</MinDamage>
+      <MaxDamage>255</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf21" id="Skysteel Lance">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd4</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>4</Tier>
+    <Description>A powerful lance made from blue-tinted steel.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/dirk</Sound>
+    <Projectile>
+      <ObjectId>Silver Proj</ObjectId>
+      <Speed>180</Speed>
+      <MinDamage>40</MinDamage>
+      <MaxDamage>200</MaxDamage>
+      <LifetimeMS>300</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf22" id="Silver Lance">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd5</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>5</Tier>
+    <Description>A enchanted lance of silver, once used by powerful Draconian Knights.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/dirk</Sound>
+    <Projectile>
+      <ObjectId>Steel Proj</ObjectId>
+      <Speed>180</Speed>
+      <MinDamage>40</MinDamage>
+      <MaxDamage>220</MaxDamage>
+      <LifetimeMS>300</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf23" id="Iron Halberd">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd6</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>6</Tier>
+    <Description>A spear used by Draconian Guards who were not yet ready to wield a lance.</Description>
+    <RateOfFire>0.8</RateOfFire>
+    <Sound>weapon/obsidian_dagger</Sound>
+    <Projectile>
+      <ObjectId>Black Proj</ObjectId>
+      <Speed>200</Speed>
+      <MinDamage>40</MinDamage>
+      <MaxDamage>305</MaxDamage>
+      <LifetimeMS>410</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf24" id="Mithril Lance">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd7</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>7</Tier>
+    <Description>A sharp and sturdy lance crafted by one of the most valuable metals.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/mithril_dagger</Sound>
+    <Projectile>
+      <ObjectId>Mithril Proj</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>240</MaxDamage>
+      <LifetimeMS>300</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf25" id="Lance of the Draconians">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xd8</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Tier>8</Tier>
+    <Description>An astoundingly powerful lance crafted in the ancient ruins of Dracoli and used by the best of Draconian Knights.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/fire_dagger</Sound>
+    <Projectile>
+      <ObjectId>Infinity Proj</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>250</MaxDamage>
+      <LifetimeMS>300</LifetimeMS>
+    </Projectile>
+    <BagType>1</BagType>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0xf26" id="Spear of Wavering Shadows">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -884,23 +876,22 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>9</Tier>
-    <Description>Two blades, a Ragetalon and Agateclaw. When used together, they vibrate and seem to sing.</Description>
-    <RateOfFire>1.5</RateOfFire>
+    <Description>A majestic spear that seems to beckon its wielder to create chaos.</Description>
+    <RateOfFire>0.8</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
-      <ObjectId>Rageclaw Proj</ObjectId>
+      <ObjectId>Darkness Bolt</ObjectId>
       <Speed>160</Speed>
-      <MinDamage>115</MinDamage>
-      <MaxDamage>170</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>315</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>1</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf27" id="Emerald Malevolence Blades">
+  <Object type="0xf27" id="Blood Emerald Lance">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -909,23 +900,22 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>10</Tier>
-    <Description>Two blades that when brought together, seem to channel each other's energy.</Description>
+    <Description>An emerald lance stained red by the blood of its victims.</Description>
     <RateOfFire>1</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
-      <ObjectId>Emalev Proj</ObjectId>
-      <Speed>200</Speed>
-      <MinDamage>120</MinDamage>
-      <MaxDamage>175</MaxDamage>
+      <ObjectId>Fire Bolt</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>80</MinDamage>
+      <MaxDamage>270</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>2</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf28" id="Eldricht Blades">
+  <Object type="0xf28" id="Spear of Enchanted Quartz">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -934,23 +924,22 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>11</Tier>
-    <Description>Twin blades that were forged in the Woods of Kor.</Description>
-    <RateOfFire>1</RateOfFire>
+    <Description>A spear tipped with a sharpened crystal with a speel of damaging cast upon it.</Description>
+    <RateOfFire>0.8</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
       <ObjectId>Eldricht Proj</ObjectId>
       <Speed>160</Speed>
-      <MinDamage>130</MinDamage>
-      <MaxDamage>190</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
+      <MinDamage>80</MinDamage>
+      <MaxDamage>330</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>3</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf29" id="Master Blades">
+  <Object type="0xf29" id="Lance of the Drake Master">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -959,23 +948,22 @@
     </Texture>
     <SlotType>26</SlotType>
     <Tier>12</Tier>
-    <Description>Twin blades forged from a single bar of magical gold.</Description>
+    <Description>A overwhelmingly strong lance crafted from the finest of materials and used by the highest ranked Draconian Knights.</Description>
     <RateOfFire>1</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
       <ObjectId>Master Proj</ObjectId>
       <Speed>160</Speed>
-      <MinDamage>140</MinDamage>
-      <MaxDamage>200</MaxDamage>
+      <MinDamage>150</MinDamage>
+      <MaxDamage>300</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>4</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf2a" id="Skyfall Blades">
+  <Object type="0xf2a" id="Spear of the Blessed Ultimate">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -983,23 +971,23 @@
       <Index>0xdd</Index>
     </Texture>
     <SlotType>26</SlotType>
-    <Description>Twin blades that seem to bring the sky down around the user.</Description>
-    <RateOfFire>.6</RateOfFire>
+  	<Tier>13</Tier>
+    <Description>A trasdescending spear gifted to mortals by the gods. It's tip is made of a very mysterious crystal...</Description>
+    <RateOfFire>.8</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
       <ObjectId>Skyfall Proj</ObjectId>
-      <Speed>120</Speed>
-      <MinDamage>200</MinDamage>
-      <MaxDamage>250</MaxDamage>
-      <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
+      <Speed>160</Speed>
+      <MinDamage>160</MinDamage>
+      <MaxDamage>350</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>5</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf2b" id="Paradox Blades">
+  <Object type="0xf2b" id="Lance of the Blessed Warrior">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1007,23 +995,23 @@
       <Index>0xde</Index>
     </Texture>
     <SlotType>26</SlotType>
-    <Description>Twio blades that contradict each other, but somehow are incredibly powerful.</Description>
-    <RateOfFire>1.3</RateOfFire>
+  	<Tier>14</Tier>
+    <Description>A legendary mithril lance that was blessed, forged, and enchanted by the godsfor the chamions and saviors of our crumbling realm.</Description>
+    <RateOfFire>1</RateOfFire>
     <Sound>weapon/fire_dagger</Sound>
     <Projectile>
       <ObjectId>Paradox Proj</ObjectId>
       <Speed>160</Speed>
-      <MinDamage>180</MinDamage>
-      <MaxDamage>200</MaxDamage>
+      <MinDamage>160</MinDamage>
+      <MaxDamage>330</MaxDamage>
       <LifetimeMS>300</LifetimeMS>
-      <MultiHit/>
     </Projectile>
     <BagType>2</BagType>
     <FameBonus>6</FameBonus>
     <NumProjectiles>1</NumProjectiles>
     <OldSound>daggerSwing</OldSound>
   </Object>
-  <Object type="0xf2c" id="Leather Jacket">
+  <Object type="0xf2c" id="Leather Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1032,15 +1020,16 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>0</Tier>
-    <Description>A jacket once worn by the very first of Blademasters.</Description>
+    <Description>A simple pair of leather boots.</Description>
     <Sound>spell/fire_nova</Sound>
     <Usable/>
     <BagType>0</BagType>
     <MpCost>60</MpCost>
-    <Activate effect="Armored" duration="3" range="4">ConditionEffectAura</Activate>
-    <Cooldown>3.5</Cooldown>
+    <Activate effect="Invulnerable" duration="2">ConditionEffectSelf</Activate>
+    <Activate maxDistance="4">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf2d" id="Darkness Jacket">
+  <Object type="0xf2d" id="Iron Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1049,15 +1038,19 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>1</Tier>
-    <Description>A jacket that envelops the wearer with the protection of darkness.</Description>
+    <Description>Strong boots made from iron.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="3">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-2">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>0</BagType>
     <MpCost>65</MpCost>
-    <Activate effect="Armored" duration="3.5" range="4">ConditionEffectAura</Activate>
-    <Cooldown>4</Cooldown>
+    <Activate effect="Invulnerable" duration="1.5">ConditionEffectSelf</Activate>
+    <Activate effect="Armored" duration="3">ConditionEffectSelf</Activate>
+    <Activate maxDistance="4">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf2e" id="Iron Jacket">
+  <Object type="0xf2e" id="Steel Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1066,15 +1059,18 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>2</Tier>
-    <Description>A very uncomfortable, but strong, jacket.</Description>
+    <Description>Boots forged from strong steel that can withstand very high jumps.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-3">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>0</BagType>
     <MpCost>70</MpCost>
-    <Activate effect="Armored" duration="4" range="4">ConditionEffectAura</Activate>
-    <Cooldown>4.5</Cooldown>
+    <Activate effect="Invulnerable" duration="3">ConditionEffectSelf</Activate>
+    <Activate maxDistance="4">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf2f" id="Lightweight Jacket">
+  <Object type="0xf2f" id="Golden Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1083,15 +1079,19 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>3</Tier>
-    <Description>A jacket that makes the user feel as light as a feather.</Description>
+    <Description>Boots that envelop the wearer in a magical aura but are weaker.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="5">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-1">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>1</BagType>
     <MpCost>75</MpCost>
-    <Activate effect="Armored" duration="4.5" range="4">ConditionEffectAura</Activate>
+    <Activate effect="Invulnerable" duration="3">ConditionEffectSelf</Activate>
+    <Activate effect="Healing" duration="5">ConditionEffectSelf</Activate>
+    <Activate maxDistance="2">Teleport</Activate>
     <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf30" id="Murderous Jacket">
+  <Object type="0xf30" id="Shadow Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1100,15 +1100,19 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>4</Tier>
-    <Description>A blood-stained jacket that has aided skilled Blademasters in the art of slaughter.</Description>
+    <Description>Magical boots crafted when a group of Shades were imroisoned by powerful Draconians.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="8">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="3">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>1</BagType>
     <MpCost>80</MpCost>
-    <Activate effect="Armored" duration="5" range="4">ConditionEffectAura</Activate>
-    <Cooldown>5.5</Cooldown>
+    <Activate effect="Invulnerable" duration="2">ConditionEffectSelf</Activate>
+    <Activate effect="Speedy" duration="3">ConditionEffectSelf</Activate>
+    <Activate maxDistance="8">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf31" id="Invincibility Jacket">
+  <Object type="0xf31" id="Dragonrider Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1117,15 +1121,18 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>5</Tier>
-    <Description>An enchanted jacket made by ancient Blademasters that protects the user from serious harm.</Description>
+    <Description>An enchanted pair of boots that were worn by a famous dragonrider.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="9">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-3">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>2</BagType>
     <MpCost>85</MpCost>
-    <Activate effect="Armored" duration="5.5" range="4">ConditionEffectAura</Activate>
-    <Cooldown>6</Cooldown>
+    <Activate effect="Invulnerable" duration="5">ConditionEffectSelf</Activate>
+    <Activate maxDistance="8">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf32" id="Jacket of Sorrows">
+  <Object type="0xf32" id="Draconian Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1134,17 +1141,20 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>6</Tier>
-    <Description>A jacket with the tears of children sewn into its collar.</Description>
+    <Description>Boots engraved with ancient Draconian runes. The aura eminating is undeniably strong.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="9">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-3">IncrementStat</ActivateOnEquip>
+  	<ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>2</BagType>
-    <MpCost>85</MpCost>
-    <ActivateOnEquip stat="26" amount="2">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="27" amount="2">IncrementStat</ActivateOnEquip>
-    <Activate effect="Armored" duration="5.5" range="4">ConditionEffectAura</Activate>
-    <Cooldown>6</Cooldown>
+    <MpCost>90</MpCost>
+    <Activate effect="Invulnerable" duration="6">ConditionEffectSelf</Activate>
+    <Activate maxDistance="8">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf33" id="Skyfall Jacket">
+  <Object type="0xf33" id="Enchanted Mithril Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1153,17 +1163,20 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>7</Tier>
-    <Description>A jacket glowing with magical power harvested from the sun itself.</Description>
+    <Description>Unbelievably powerful boots forged from the most desirable of metals.</Description>
     <Sound>spell/fire_nova</Sound>
-    <Usable/>
-    <BagType>4</BagType>
-    <MpCost>90</MpCost>
-    <ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="28" amount="9">IncrementStat</ActivateOnEquip>
+  	<ActivateOnEquip stat="26" amount="3">IncrementStat</ActivateOnEquip>
     <ActivateOnEquip stat="27" amount="3">IncrementStat</ActivateOnEquip>
-    <Activate effect="Armored" duration="6" range="4">ConditionEffectAura</Activate>
-    <Cooldown>6.5</Cooldown>
+    <Usable/>
+    <BagType>2</BagType>
+    <MpCost>95</MpCost>
+    <Activate effect="Invulnerable" duration="6">ConditionEffectSelf</Activate>
+    <Activate effect="Damaging" duration="6">ConditionEffectSelf</Activate>
+    <Activate maxDistance="8">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
-  <Object type="0xf34" id="Jacket of Bloodrut Nature">
+  <Object type="0xf34" id="True Draconian Boots">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
@@ -1172,16 +1185,18 @@
     </Texture>
     <SlotType>27</SlotType>
     <Tier>8</Tier>
-    <Description>An extremely powerful jacket once used for evil by Oryx's blademasters to take down all intruders.</Description>
+    <Description>An ancient pair of boots forged ffrom the finest gold and encrusted with several shining gems of various colors and magiks.</Description>
     <Sound>spell/fire_nova</Sound>
+    <ActivateOnEquip stat="28" amount="12">IncrementStat</ActivateOnEquip>
+  	<ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
     <Usable/>
     <BagType>4</BagType>
-    <MpCost>100</MpCost>
-    <ActivateOnEquip stat="26" amount="4">IncrementStat</ActivateOnEquip>
-    <ActivateOnEquip stat="27" amount="4">IncrementStat</ActivateOnEquip>
-    <Activate effect="Armored" duration="6" range="4">ConditionEffectAura</Activate>
-    <Activate effect="Damaging" duration="6">ConditionEffectSelf</Activate>
-    <Cooldown>7</Cooldown>
+    <MpCost>120</MpCost>
+    <Activate effect="Invulnerable" duration="7">ConditionEffectSelf</Activate>
+    <Activate effect="Berserk" duration="7">ConditionEffectSelf</Activate>
+    <Activate maxDistance="10">Teleport</Activate>
+    <Cooldown>5</Cooldown>
   </Object>
   <Object type="0xf35" id="Jacket of Balance">
     <Class>Equipment</Class>
@@ -4105,102 +4120,1163 @@
     <BagType>5</BagType>
     <FameBonus>1000</FameBonus>
   </Object>
-
-  <Object type="0x0326" id="Blademaster">
-    <Class>Player</Class>
-    <Description>The Blademaster Fights with dual blades and uses his jacket to provide several buffs for himself.</Description>
-    <AnimatedTexture>
-      <File>players</File>
-      <Index>13</Index>
-    </AnimatedTexture>
-    <HitSound>player/rogue_hit</HitSound>
-    <DeathSound>player/rogue_death</DeathSound>
-    <Player/>
-    <BloodProb>1.0</BloodProb>
-    <SlotTypes>26, 27, 6, 9, 0, 0, 0, 0, 0, 0, 0, 0</SlotTypes>
-    <Equipment>0xf1d, 0xf2c, -1, -1, 0xa22, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="720">150</MaxHitPoints>
-    <MaxMagicPoints max="252">100</MaxMagicPoints>
-    <Attack max="35">10</Attack>
-    <Defense max="15">0</Defense>
-    <Speed max="100">15</Speed>
-    <Dexterity max="100">15</Dexterity>
-    <HpRegen max="40">15</HpRegen>
-    <MpRegen max="50">10</MpRegen>
-    <LevelIncrease min="20" max="30">MaxHitPoints</LevelIncrease>
-    <LevelIncrease min="2" max="8">MaxMagicPoints</LevelIncrease>
-    <LevelIncrease min="0" max="2">Attack</LevelIncrease>
-    <LevelIncrease min="0" max="0">Defense</LevelIncrease>
-    <LevelIncrease min="1" max="3">Speed</LevelIncrease>
-    <LevelIncrease min="1" max="3">Dexterity</LevelIncrease>
-    <LevelIncrease min="0" max="1">HpRegen</LevelIncrease>
-    <LevelIncrease min="0" max="2">MpRegen</LevelIncrease>
-    <UnlockLevel level="20">Rogue</UnlockLevel>
-    <UnlockLevel level="20">Warrior</UnlockLevel>
-  </Object>
-  <Object type="0xf37" id="Bow of Opulence">
+  <Object type="0x1962" id="Bow of Opulence">
     <Class>Equipment</Class>
     <Item/>
     <Texture>
-      <File>lofiObj5</File>
-      <Index>0x50</Index>
+      <File>lofiObj6</File>
+      <Index>0x0a</Index>
     </Texture>
     <SlotType>3</SlotType>
     <Description>A well-made shortbow crafted from enchanted periwinkle wood and sapphires for a king when he went hunting.</Description>
-    <RateOfFire>1</RateOfFire>
+    <RateOfFire>1.4</RateOfFire>
     <Sound>weapon/poor_quality_bow</Sound>
     <Projectile>
       <ObjectId>Blue Arrow</ObjectId>
       <Speed>320</Speed>
-      <MinDamage>90</MinDamage>
-      <MaxDamage>140</MaxDamage>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>70</MaxDamage>
       <LifetimeMS>220</LifetimeMS>
       <MultiHit/>
     </Projectile>
     <BagType>4</BagType>
-  	<FameBonus>5</FameBonus>
+  	<FameBonus>6</FameBonus>
+    <NumProjectiles>5</NumProjectiles>
     <OldSound>arrowShoot</OldSound>
   </Object>
-
-  
-  <!--
-  <Object type="0x1940" id="Donran">
-    <Class>Player</Class>
-    <Description>C453 thought this would be fun</Description>
-    <AnimatedTexture>
-      <File>players</File>
-      <Index>10</Index>
-    </AnimatedTexture>
-    <HitSound>player/rogue_hit</HitSound>
-    <DeathSound>player/rogue_death</DeathSound>
-    <Player/>
-    <BloodProb>1.0</BloodProb>
-    <SlotTypes>891, 891, 891, 891, 891, 891, 891, 891, 891, 891, 891, 891</SlotTypes>
-    <Equipment>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1</Equipment>
-    <MaxHitPoints max="1">1</MaxHitPoints>
-    <MaxMagicPoints max="1">1</MaxMagicPoints>
-    <Attack max="0">0</Attack>
-    <Defense max="25">0</Defense>
-    <Speed max="0">0</Speed>
-    <Dexterity max="0">0</Dexterity>
-    <HpRegen max="0">0</HpRegen>
-    <MpRegen max="0">0</MpRegen>
-    <LevelIncrease min="0" max="0">MaxHitPoints</LevelIncrease>
-    <LevelIncrease min="0" max="0">MaxMagicPoints</LevelIncrease>
-    <LevelIncrease min="0" max="0">Attack</LevelIncrease>
-    <LevelIncrease min="0" max="0">Defense</LevelIncrease>
-    <LevelIncrease min="0" max="0">Speed</LevelIncrease>
-    <LevelIncrease min="0" max="0">Dexterity</LevelIncrease>
-    <LevelIncrease min="0" max="0">HpRegen</LevelIncrease>
-    <LevelIncrease min="0" max="0">MpRegen</LevelIncrease>
+  <Object type="0xfe0" id="Staff of Unlimited Patience">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x0c</Index>
+    </Texture>
+    <SlotType>17</SlotType>
+    <Description>A staff once used by a powerful time wizard. During the Great Conquest of the REalm, the staff was cursed to fire very slow magic.</Description>
+    <RateOfFire>0.65</RateOfFire>
+    <Sound>weapon/missile_wand</Sound>
+    <Projectile>
+      <ObjectId>Aqua Missile</ObjectId>
+      <Speed>10</Speed>
+      <MinDamage>140</MinDamage>
+      <MaxDamage>380</MaxDamage>
+      <LifetimeMS>12000</LifetimeMS>
+      <Amplitude>0.5</Amplitude>
+      <Frequency>2</Frequency>
+    </Projectile>
+    <BagType>2</BagType>
+  	<FameBonus>4</FameBonus>
+    <NumProjectiles>2</NumProjectiles>
+    <ArcGap>0</ArcGap>
+    <OldSound>magicShoot</OldSound>
   </Object>
-  -->
-  
-  
-  
-	<!-- Custom Enemies 
-	0x0f00 - 0xffff Custom Enemies
-	0x0f00 Used for Tree
-	0x0f01 - 0x0f08 Reserved For Unknown
-	-->
+  <Object type="0xfe1" id="True Admin Staff">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x0d</Index>
+    </Texture>
+    <SlotType>17</SlotType>
+    <Description>#UberAdminPower</Description>
+    <RateOfFire>1.2</RateOfFire>
+    <Sound>weapon/sprite_wand</Sound>
+    <Projectile>
+      <ObjectId>Directed Explosion</ObjectId>
+      <Speed>110</Speed>
+      <MinDamage>10000</MinDamage>
+      <MaxDamage>65000</MaxDamage>
+      <LifetimeMS>864</LifetimeMS>
+      <Amplitude>0.15</Amplitude>
+      <Frequency>2</Frequency>
+  	  <MultiHit/>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <NumProjectiles>10</NumProjectiles>
+    <ArcGap>36</ArcGap>
+    <OldSound>magicShoot</OldSound>
+  </Object>
+  <Object type="0xfe2" id="Robe of the Wise Magician">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x0f</Index>
+    </Texture>
+    <SlotType>14</SlotType>
+    <Description>A robe used by the famous magician, Vorv.</Description>
+    <ActivateOnEquip stat="27" amount="16">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="21" amount="7">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="3" amount="200">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="28" amount="9">IncrementStat</ActivateOnEquip>
+  	<BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+  </Object>
+  <Object type="0xfe3" id="Robe of the Ancient Battlemage">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x1a</Index>
+    </Texture>
+    <SlotType>14</SlotType>
+    <Description>A robe used by ancient warrior mages</Description>
+    <ActivateOnEquip stat="27" amount="-4">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="21" amount="24">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="3" amount="-80">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="20" amount="18">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="-8">IncrementStat</ActivateOnEquip>
+  	<BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+  </Object>
+<Object type="0xfe4" id="Ring of Extreme Speed">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x0e</Index>
+    </Texture>
+    <SlotType>9</SlotType>
+    <Description>An beautiful emerald set in a stunning gold ring.</Description>
+    <ActivateOnEquip stat="22" amount="20">IncrementStat</ActivateOnEquip>
+    <BagType>4</BagType>
+    <FameBonus>5</FameBonus>
+  </Object>
+<Object type="0xfe5" id="Staff of Imminent Doom">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x0b</Index>
+    </Texture>
+    <SlotType>17</SlotType>
+    <Description>A magical wooden staff topped with a black and white crystal.</Description>
+    <RateOfFire>2</RateOfFire>
+    <Sound>weapon/fire_wand</Sound>
+    <Projectile>
+      <ObjectId>Grey Missile</ObjectId>
+      <Speed>180</Speed>
+      <MinDamage>55</MinDamage>
+      <MaxDamage>75</MaxDamage>
+      <LifetimeMS>305</LifetimeMS>
+      <Amplitude>0.5</Amplitude>
+      <Frequency>2</Frequency>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <NumProjectiles>2</NumProjectiles>
+    <ArcGap>0</ArcGap>
+    <OldSound>magicShoot</OldSound>
+  </Object>
+	<Object type="0xfe6" id="Pink Eye">
+		<Group>Gods</Group>
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x05</Index></AnimatedTexture>
+		<HitSound>monster/beholder_hit</HitSound>
+		<DeathSound>monster/beholder_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>9500</MaxHitPoints>
+		<Defense>12</Defense>
+		<Terrain>Mountains</Terrain>
+		<SpawnProb>0.4</SpawnProb>
+		<Spawn><Mean>3</Mean><StdDev>1</StdDev><Min>2</Min><Max>7</Max></Spawn>
+		<Flying/>
+		<God/>
+		<Projectile id="0">
+			<ObjectId>Pink Bolt</ObjectId>
+			<Damage>275</Damage>
+			<Speed>75</Speed>
+			<LifetimeMS>2700</LifetimeMS>
+			<Size>120</Size>
+		</Projectile>
+		<Projectile id="1">
+			<ObjectId>Blue Star</ObjectId>
+			<Damage>100</Damage>
+			<Speed>70</Speed>
+			<LifetimeMS>3000</LifetimeMS>
+			<ConditionEffect duration="10">Blind</ConditionEffect>
+		</Projectile>
+
+	</Object>
+	<Object type="0xfe7" id="Stone Gazer">
+		<Group>Gods</Group>
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x02</Index></AnimatedTexture>
+		<HitSound>monster/medusa_hit</HitSound>
+		<DeathSound>monster/medusa_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>8000</MaxHitPoints>
+		<Defense>48</Defense>
+		<Terrain>Mountains</Terrain>
+		<SpawnProb>0.3</SpawnProb>
+		<Spawn><Mean>3</Mean><StdDev>1</StdDev><Min>2</Min><Max>5</Max></Spawn>
+		<God/>
+		<Projectile id="0">
+			<ObjectId>Green Bolt</ObjectId>
+			<Damage>30</Damage>
+			<Speed>70</Speed>
+			<LifetimeMS>2000</LifetimeMS>
+			<ConditionEffect duration="5">Stunned</ConditionEffect>
+		</Projectile>
+
+	</Object>
+	<Object type="0xfe8" id="Blue Demon">
+		<Group>Greater Demons</Group>
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x00</Index></AnimatedTexture>
+		<HitSound>monster/greater_demons_hit</HitSound>
+		<DeathSound>monster/greater_demons_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>9500</MaxHitPoints>
+		<Defense>12</Defense>
+		<Terrain>Mountains</Terrain>
+		<SpawnProb>0.4</SpawnProb>
+		<Spawn><Mean>2</Mean><StdDev>1</StdDev><Min>2</Min><Max>4</Max></Spawn>
+		<Flying/>
+		<God/>
+		<Projectile id="0">
+			<ObjectId>White Demon Shot</ObjectId>
+			<Damage>200</Damage>
+			<Speed>50</Speed>
+			<LifetimeMS>2000</LifetimeMS>
+			<Size>60</Size>
+			<ConditionEffect duration="10">Armor Broken</ConditionEffect>
+			<MultiHit/>
+		</Projectile>
+
+	</Object>
+	<Object type="0xfe9" id="Genie">
+		<Group>Gods</Group>
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x03</Index></AnimatedTexture>
+		<HitSound>monster/djinn_hit</HitSound>
+		<DeathSound>monster/djinn_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>6000</MaxHitPoints>
+		<Defense>12</Defense>
+		<Terrain>Mountains</Terrain>
+		<Spawn><Mean>3</Mean><StdDev>1</StdDev><Min>2</Min><Max>5</Max></Spawn>
+		<Flying/>
+		<God/>
+		<SpawnProb>0.3</SpawnProb>
+
+		<Projectile id="0">
+			<ObjectId>White Bullet</ObjectId>
+			<Damage>150</Damage>
+			<Speed>60</Speed>
+			<Size>60</Size>
+			<LifetimeMS>1500</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		
+					
+		
+		
+		
+			
+	</Object>
+  <Object type="0xfea" id="Tattered Robe">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0x1b</Index>
+    </Texture>
+    <SlotType>14</SlotType>
+    <Description>A an ancient rboe left in tatters from continual use.</Description>
+    <ActivateOnEquip stat="27" amount="6">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="21" amount="10">IncrementStat</ActivateOnEquip>
+    <ActivateOnEquip stat="22" amount="15">IncrementStat</ActivateOnEquip>
+  	<BagType>2</BagType>
+    <FameBonus>4</FameBonus>
+  </Object>
+	
+  <Object type="0xfeb" id="Super Gift">
+	<Group>Ocean Trench</Group>
+	<Class>Character</Class>
+    <StasisImmune/>
+	<Enemy/>
+	<NoMiniMap/>
+		
+	<MaxHitPoints>1200</MaxHitPoints>
+	<XpMult>0.1</XpMult>
+	<Size>100</Size>
+	<Defense>5</Defense>
+	
+	<Texture><File>lofiEnvironment3</File><Index>0x22</Index></Texture>
+	<AltTexture id="1">
+		<Texture><File>lofiEnvironment3</File><Index>0x23</Index></Texture>
+	</AltTexture>
+	<AltTexture id="2">
+		<Texture><File>lofiEnvironment3</File><Index>0x24</Index></Texture>
+	</AltTexture>
+        	
+	<HitSound>monster/djinn_hit</HitSound>
+	<DeathSound>monster/flaming_skulls_death</DeathSound>
+		
+		
+  </Object>
+  <Object type="0xfec" id="Hyper Gift">
+	<Group>Ocean Trench</Group>
+	<Class>Character</Class>
+    <StasisImmune/>
+	<Enemy/>
+	<NoMiniMap/>
+		
+	<MaxHitPoints>5000</MaxHitPoints>
+	<XpMult>0.1</XpMult>
+	<Size>120</Size>
+	<Defense>50000</Defense>
+	
+	<Texture><File>lofiEnvironment3</File><Index>0x22</Index></Texture>
+	<AltTexture id="1">
+		<Texture><File>lofiEnvironment3</File><Index>0x23</Index></Texture>
+	</AltTexture>
+	<AltTexture id="2">
+		<Texture><File>lofiEnvironment3</File><Index>0x24</Index></Texture>
+	</AltTexture>
+        	
+	<HitSound>monster/djinn_hit</HitSound>
+	<DeathSound>monster/flaming_skulls_death</DeathSound>
+			
+  </Object>
+  <Object type="0x1960" id="Boomerang Wand">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0x4e</Index>
+    </Texture>
+    <SlotType>8</SlotType>
+    <Tier>14</Tier>
+    <Description>A golden wand of breathtaking power, created by elemental forces from the realms of ice and flame to unleash revenge on their enemies.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/wand_of_death</Sound>
+    <Projectile>
+      <ObjectId>Blue Boomerang</ObjectId>
+      <Speed>130</Speed>
+      <MinDamage>230</MinDamage>
+      <MaxDamage>300</MaxDamage>
+      <LifetimeMS>770</LifetimeMS>
+      <Boomerang/>
+      <MultiHit/>
+      <Amplitude>1.5</Amplitude>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <OldSound>magicShoot</OldSound>
+  </Object>
+	<Object type="0x1961" id="Glaring Eye">
+		<Group>Gods</Group>
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x05</Index></AnimatedTexture>
+		<HitSound>monster/beholder_hit</HitSound>
+		<DeathSound>monster/beholder_death</DeathSound>
+		<Size>200</Size>
+		<MaxHitPoints>30000</MaxHitPoints>
+		<Defense>80</Defense>
+		<Terrain>Mountains</Terrain>
+		<SpawnProb>0.4</SpawnProb>
+		<Spawn><Mean>3</Mean><StdDev>1</StdDev><Min>2</Min><Max>7</Max></Spawn>
+		<XpMult>2</XpMult>
+		<Flying/>
+		<God/>
+		<Projectile id="0">
+			<ObjectId>Darkness Bolt</ObjectId>
+			<Damage>215</Damage>
+			<Speed>25</Speed>
+			<LifetimeMS>10000</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3">Dazed</ConditionEffect>
+		</Projectile>
+		<Projectile id="1">
+			<ObjectId>Blue Star</ObjectId>
+			<Damage>80</Damage>
+			<Speed>70</Speed>
+			<LifetimeMS>3000</LifetimeMS>
+			<ConditionEffect duration="10">Blind</ConditionEffect>
+		</Projectile>
+		<Projectile id="2">
+			<ObjectId>Dark Gray Spinner</ObjectId>
+			<Damage>125</Damage>
+			<Speed>75</Speed>
+			<LifetimeMS>2700</LifetimeMS>
+			<Size>120</Size>
+			<ConditionEffect duration="3">Bleeding</ConditionEffect>
+		</Projectile>
+	</Object>
+  <Object type="0x1963" id="Sword of Piercing Shadows">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj2</File>
+      <Index>0x68</Index>
+    </Texture>
+    <SlotType>1</SlotType>
+    <Description>A horrifically powerful sword that pierces through the souls of those it slices.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/glass_sword</Sound>
+    <Projectile>
+      <ObjectId>Darkness Bolt</ObjectId>
+      <Speed>300</Speed>
+      <MinDamage>200</MinDamage>
+      <MaxDamage>260</MaxDamage>
+      <LifetimeMS>165</LifetimeMS>
+      <MultiHit/>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1964" id="Frosty Key">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj2</File>
+      <Index>0x75</Index>
+    </Texture>
+    <SlotType>10</SlotType>
+    <Description>A key which opens an entrance to the Frozen Mine.</Description>
+    <Sound>use_key</Sound>
+    <Consumable/>
+    <Soulbound/>
+    <Activate id="Frozen Mine Portal">Create</Activate>
+  </Object>
+  <Object type="0x1964" id="Frozen Mine Portal">
+    <Class>Portal</Class>
+    <IntergamePortal/>
+    <DungeonName>Frozen Mine</DungeonName>
+    <Texture>
+      <File>lofiEnvironment</File>
+      <Index>0x7c</Index>
+    </Texture>
+  </Object>
+  <Object type="0x1965" id="Premium Shop Portal">
+    <Class>Portal</Class>
+    <IntergamePortal/>
+    <DungeonName>Premium Shop</DungeonName>
+    <Texture>
+      <File>lofiEnvironment</File>
+      <Index>0x7c</Index>
+    </Texture>
+  </Object>
+  <Object type="0x1966" id="Golden Key">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj2</File>
+      <Index>0x75</Index>
+    </Texture>
+    <SlotType>10</SlotType>
+    <Description>A key which opens an entrance to the Frozen Mine.</Description>
+    <Sound>use_key</Sound>
+    <Consumable/>
+    <Soulbound/>
+    <Activate id="Premium Shop Portal">Create</Activate>
+  </Object>
+  <Object type="0x1967" id="Scorpion Ether">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe0</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>0</Tier>
+    <Description>An ether concentrated from a Scorpion Queen.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>0</BagType>
+    <MpCost>30</MpCost>
+    <Activate effect="Healing" duration="5">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x1968" id="Grey Ether">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe1</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>1</Tier>
+    <Description>An ether made from a blood sample of the highly volatile Grey Blob.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>0</BagType>
+    <MpCost>35</MpCost>
+    <Activate effect="Damaging" duration="6">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x1969" id="Temple Skull Ether">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe2</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>2</Tier>
+    <Description>A concentrated sample of a crystallized skull.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>0</BagType>
+    <MpCost>40</MpCost>
+    <Activate effect="Berserk" duration="8">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x196a" id="Snake Poison Ether">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe3</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>3</Tier>
+    <Description>Snake's toxin, diluted and mixed with chemicals to make a powerful ether.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>1</BagType>
+    <MpCost>50</MpCost>
+    <Activate effect="Armored" duration="8">ConditionEffectSelf</Activate>
+    <Activate effect="Healing" duration="8">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x196b" id="Felwasp Ether">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe4</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>4</Tier>
+    <Description>An ether formed from the deadly toxins of a Felwasp.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>1</BagType>
+    <MpCost>60</MpCost>
+    <Activate effect="Damaging" duration="8">ConditionEffectSelf</Activate>
+    <Activate effect="Healing" duration="8">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x196c" id="Glass Syringe">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe5</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>5</Tier>
+    <Description>A much more effective method for administering medicine.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>2</BagType>
+    <MpCost>80</MpCost>
+    <Activate effect="Healing" duration="15">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x196d" id="Syringe of Modern Marvels">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe6</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>6</Tier>
+    <Description>A syringe formulated by the most advanced mages and tested by the best doctors.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>2</BagType>
+    <MpCost>110</MpCost>
+    <Activate effect="Healing" duration="10">ConditionEffectSelf</Activate>
+    <Activate effect="Armored" duration="10">ConditionEffectSelf</Activate>
+    <Activate range="1">RemoveNegativeConditions</Activate>
+  </Object>
+  <Object type="0x196e" id="Toxic Syringe">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe7</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>7</Tier>
+    <Description>A syringe filled with chemicals that make the injected feel no pain.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>2</BagType>
+    <MpCost>150</MpCost>
+    <Activate effect="Invulnerable" duration="10">ConditionEffectSelf</Activate>
+    <Activate effect="Hallucinating" duration="20">ConditionEffectSelf</Activate>
+    <Activate effect="Drunk" duration="20">ConditionEffectSelf</Activate>
+  </Object>
+  <Object type="0x196f" id="Syringe of the Mythical Scorpion">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj6</File>
+      <Index>0xe8</Index>
+    </Texture>
+    <SlotType>28</SlotType>
+    <Tier>8</Tier>
+    <Description>A syringe filled with the blood of the legendary Scorpion Goddess.</Description>
+    <Sound>spell/light_heal</Sound>
+    <Usable/>
+    <BagType>2</BagType>
+    <MpCost>190</MpCost>
+    <Activate effect="Healing" duration="20">ConditionEffectSelf</Activate>
+    <Activate effect="Berserk" duration="20">ConditionEffectSelf</Activate>
+  </Object>
+	<Object type="0x1970" id="Sulthos the Snake Lord">
+		<Class>Character</Class>
+		<Texture><File>lofiChar216x16</File><Index>0x33</Index></Texture>
+		<HitSound>monster/snake_queen_hit</HitSound>
+		<DeathSound>monster/snake_queen_death</DeathSound>
+		<Size>120</Size>
+		<MaxHitPoints>28500</MaxHitPoints>
+		<Defense>39</Defense>
+		<Enemy/>
+		<God/>
+		<StasisImmune/>
+		<Quest/>
+		<Level>1</Level>
+		<XpMult>0.7</XpMult>
+		<NoArticle/>
+		
+		<Projectile id="0">
+			<ObjectId>Blue Bolt</ObjectId>
+			<Speed>150</Speed>
+			<Damage>160</Damage>
+			<Size>100</Size>
+			<LifetimeMS>1500</LifetimeMS>
+			<MultiHit/>
+		</Projectile>
+		<Projectile id="1">					
+			<ObjectId>Green Spinner</ObjectId>
+			<Speed>22</Speed>
+			<Damage>150</Damage>
+			<Size>60</Size>
+			<LifetimeMS>8000</LifetimeMS>
+			<ConditionEffect duration="2.8">Dazed</ConditionEffect>
+			<MultiHit/>
+		</Projectile>
+		
+
+
+	</Object>
+  <Object type="0x1971" id="Poseidon's Trident">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xde</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Description>A trident used by the famed god of the seas, Poseidon.</Description>
+    <RateOfFire>0.8</RateOfFire>
+    <Sound>weapon/fire_dagger</Sound>
+    <Projectile>
+      <ObjectId>Paradox Proj</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>130</MinDamage>
+      <MaxDamage>170</MaxDamage>
+      <LifetimeMS>120</LifetimeMS>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <NumProjectiles>3</NumProjectiles>
+  	<ArcGap>20</ArcGap>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0x1972" id="Dual Diamond Spears">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xdd</Index>
+    </Texture>
+    <SlotType>26</SlotType>
+    <Description>A lightweight pair of spears used by the champions of the anciient realm.</Description>
+    <RateOfFire>1.6</RateOfFire>
+    <Sound>weapon/fire_dagger</Sound>
+    <Projectile>
+      <ObjectId>Skyfall Proj</ObjectId>
+      <Speed>160</Speed>
+      <MinDamage>100</MinDamage>
+      <MaxDamage>190</MaxDamage>
+      <LifetimeMS>400</LifetimeMS>
+    </Projectile>
+    <BagType>4</BagType>
+    <FameBonus>6</FameBonus>
+    <NumProjectiles>1</NumProjectiles>
+    <OldSound>daggerSwing</OldSound>
+  </Object>
+  <Object type="0x1973" id="Rusty Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf0</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>0</Tier>
+    <Description>A rusted scalpel.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>40</MinDamage>
+      <MaxDamage>50</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1974" id="Iron Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf1</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>1</Tier>
+    <Description>A polished scalpel made from iron.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>40</MinDamage>
+      <MaxDamage>60</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1975" id="Bloodied Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf2</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>2</Tier>
+    <Description>A scalpel somehow made stronger by being covered in blood.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>60</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1976" id="Amethyst Plate Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf3</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>3</Tier>
+    <Description>A scalpel plated in amethyst gem.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>50</MinDamage>
+      <MaxDamage>70</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1977" id="Ruby Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf4</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>4</Tier>
+    <Description>A scalpel with a ruby encrusted in the handle.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>60</MinDamage>
+      <MaxDamage>70</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1978" id="Emerald Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf5</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>5</Tier>
+    <Description>A scalpel with a emerald encrusted in the handle.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>60</MinDamage>
+      <MaxDamage>80</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>0</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1979" id="Sapphire Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf6</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>6</Tier>
+    <Description>A scalpel with a sapphire encrusted in the handle.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>70</MinDamage>
+      <MaxDamage>80</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>1</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197a" id="Amethyst Crystal Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf7</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>7</Tier>
+    <Description>A scalpel with a blade made from amethyst.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>70</MinDamage>
+      <MaxDamage>90</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>1</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197b" id="Mythril Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf8</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>8</Tier>
+    <Description>A golden scalpel witha diamond blade.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>80</MinDamage>
+      <MaxDamage>100</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>1</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197c" id="Emerald Bladed Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xf9</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>9</Tier>
+    <Description>A golden scalpel with an emerald blade.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>90</MinDamage>
+      <MaxDamage>100</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>1</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197d" id="Enchanted Golden Scalpel">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xfa</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>10</Tier>
+    <Description>A golden scalpel with an enchanted amethyst blade.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>90</MinDamage>
+      <MaxDamage>110</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>2</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197e" id="Scalpel of the Maddened Surgeon">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xfb</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>11</Tier>
+    <Description>A scalpel permanently stained with blood from the amount of victims slain by it.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>100</MinDamage>
+      <MaxDamage>110</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>2</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x197f" id="Scalpel of the Divine">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xfc</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>12</Tier>
+    <Description>A scalpel that emenates an aura of safety, and pierces the hide of even the toughest of creatures.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>105</MinDamage>
+      <MaxDamage>115</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>2</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1980" id="Scalpel of the Cosmic Ultimatum">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xfd</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>13</Tier>
+    <Description>A scalpel forged by the goddesses of the cosmos, imbuing it with the strongest of magics and the richest gems.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>110</MinDamage>
+      <MaxDamage>120</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>4</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+  <Object type="0x1981" id="Scalpel of Undying Hatred">
+    <Class>Equipment</Class>
+    <Item/>
+    <Texture>
+      <File>lofiObj5</File>
+      <Index>0xfe</Index>
+    </Texture>
+    <SlotType>29</SlotType>
+    <Tier>14</Tier>
+    <Description>A scalpel forged by Oryx himself, used by his doctors to remove the limbs of those whom they meet.</Description>
+    <RateOfFire>1</RateOfFire>
+    <Sound>weapon/blunt_sword</Sound>
+    <Projectile>
+      <ObjectId>Blade</ObjectId>
+      <Speed>100</Speed>
+      <MinDamage>115</MinDamage>
+      <MaxDamage>125</MaxDamage>
+      <LifetimeMS>350</LifetimeMS>
+  	  <ArmorPiercing/>
+    </Projectile>
+    <BagType>4</BagType>
+    <OldSound>bladeSwing</OldSound>
+  </Object>
+	<Object type="0x2005" id="Zombified Patient A">
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars8x8rBeach</File><Index>12</Index></AnimatedTexture>
+		<HitSound>monster/elves_hit</HitSound>
+		<DeathSound>monster/elves_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>2300</MaxHitPoints>
+		<Defense>500</Defense>
+		
+		<Projectile id="0">
+			<ObjectId>Blade</ObjectId>
+			<Damage>100</Damage>
+			<Speed>70</Speed>
+			<Size>120</Size>
+			<LifetimeMS>1200</LifetimeMS>
+		</Projectile>		
+		
+		
+	</Object>
+	<Object type="0x2006" id="Zombified Patient B">
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars8x8rBeach</File><Index>13</Index></AnimatedTexture>
+		<HitSound>monster/elves_hit</HitSound>
+		<DeathSound>monster/elves_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>1800</MaxHitPoints>
+		<Defense>500</Defense>
+		
+		<Projectile id="0">
+			<ObjectId>Blade</ObjectId>
+			<Damage>160</Damage>
+			<Speed>80</Speed>
+			<Size>120</Size>
+			<LifetimeMS>1200</LifetimeMS>
+		</Projectile>		
+		
+		
+	</Object>
+	<Object type="0x2007" id="Zombified Patient C">
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars8x8rBeach</File><Index>14</Index></AnimatedTexture>
+		<HitSound>monster/elves_hit</HitSound>
+		<DeathSound>monster/elves_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>3000</MaxHitPoints>
+		<Defense>500</Defense>
+		
+		<Projectile id="0">
+			<ObjectId>Blade</ObjectId>
+			<Damage>70</Damage>
+			<Speed>60</Speed>
+			<Size>120</Size>
+			<LifetimeMS>1500</LifetimeMS>
+		</Projectile>		
+		
+		
+	</Object>
+	<Object type="0x2008" id="Doctor Zambarus">
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars16x16dMountains1</File><Index>0x09</Index></AnimatedTexture>
+		<HitSound>monster/dwarf_god_hit</HitSound>
+		<DeathSound>monster/dwarf_god_death</DeathSound>
+		<Size>195</Size>
+		<MaxHitPoints>46000</MaxHitPoints>
+		<Defense>45</Defense>
+		<God/>
+		<StasisImmune/>
+		<Hero/>
+		<Quest/>
+		<Encounter/>
+		<Level>20</Level>
+		<XpMult>0.3</XpMult>
+		<PerRealmMax>1</PerRealmMax>
+		
+		<Projectile id="0">
+			<ObjectId>Gray Spinner</ObjectId>
+			<Speed>80</Speed>
+			<Damage>155</Damage>
+			<Size>110</Size>
+			<LifetimeMS>1350</LifetimeMS>
+			<ConditionEffect duration="3">Slowed</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>			
+		</Projectile>		
+		<Projectile id="1">
+			<ObjectId>Green Spinner</ObjectId>
+			<Speed>60</Speed>
+			<Damage>105</Damage>
+			<Size>110</Size>
+			<LifetimeMS>2000</LifetimeMS>
+			<ConditionEffect duration="5">Sick</ConditionEffect>
+			<MultiHit/>
+			<PassesCover/>			
+		</Projectile>		
+	</Object>
+	<Object type="0x2009" id="BioX-032">
+		<Enemy/>
+		<Class>Character</Class>
+		<AnimatedTexture><File>chars8x8rBeach</File><Index>15</Index></AnimatedTexture>
+		<HitSound>monster/elves_hit</HitSound>
+		<DeathSound>monster/elves_death</DeathSound>
+		<Size>125</Size>
+		<MaxHitPoints>640</MaxHitPoints>
+		<Defense>500</Defense>
+		
+		<Projectile id="0">
+			<ObjectId>Fire Missile</ObjectId>
+			<Damage>70</Damage>
+			<Speed>60</Speed>
+			<Size>120</Size>
+			<LifetimeMS>500</LifetimeMS>
+		</Projectile>		
+		
+		
+	</Object>
 </Addition>

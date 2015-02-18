@@ -478,7 +478,7 @@
             <Damage>150</Damage>
             <Speed>70</Speed>
             <Size>75</Size>
-            <LifetimeMS>3000</LifetimeMS>
+            <LifetimeMS>4000</LifetimeMS>
             <ConditionEffect duration="1">Stunned</ConditionEffect>
         </Projectile>
 
@@ -687,7 +687,7 @@
             <Size>280</Size>
             <Speed>55</Speed>
             <Damage>200</Damage>
-            <LifetimeMS>3000</LifetimeMS>
+            <LifetimeMS>4000</LifetimeMS>
         </Projectile>
         
         <Projectile id="5">

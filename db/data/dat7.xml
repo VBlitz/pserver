@@ -48,7 +48,7 @@
 			<ObjectId>Dark Blue Magic</ObjectId>
 			<Damage>17</Damage>
 			<Speed>80</Speed>
-			<LifetimeMS>300</LifetimeMS>
+			<LifetimeMS>400</LifetimeMS>
 		</Projectile>		
 		
 		
@@ -417,7 +417,7 @@
             <Speed>50</Speed>
             <Damage>10</Damage>
             <Size>50</Size>
-            <LifetimeMS>3000</LifetimeMS>
+            <LifetimeMS>4000</LifetimeMS>
         </Projectile>
        
         <Size>100</Size>
@@ -592,7 +592,7 @@
 			<Damage>14</Damage>
 			<Speed>35</Speed>
 			<Size>90</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Wavy/>
 		</Projectile>
 		<Projectile id="1">

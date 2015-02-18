@@ -84,7 +84,7 @@
 			<ObjectId>Green Magic</ObjectId>
 			<Speed>50</Speed>
 			<Damage>25</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 

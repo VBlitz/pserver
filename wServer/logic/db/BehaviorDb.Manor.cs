@@ -24,11 +24,11 @@ namespace wServer.logic
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(100, new LootDef(0, 2, 0, 2,
                             Tuple.Create(0.05, (ILoot)new ItemLoot("Wine Cellar Incantation")),
-                            Tuple.Create(0.08, (ILoot)new ItemLoot("Tome of Purification")),
-                            Tuple.Create(0.5, (ILoot)new ItemLoot("Holy Water")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("St. Abraham's Wand")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Chasuble of Holy Light")),
-                            Tuple.Create(0.12, (ILoot)new ItemLoot("Ring of Divine Faith"))
+                            Tuple.Create(0.3, (ILoot)new ItemLoot("Tome of Purification")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Holy Water")),
+                            Tuple.Create(0.3, (ILoot)new ItemLoot("St. Abraham's Wand")),
+                            Tuple.Create(0.3, (ILoot)new ItemLoot("Chasuble of Holy Light")),
+                            Tuple.Create(0.3, (ILoot)new ItemLoot("Ring of Divine Faith"))
                     )))
 
             ));

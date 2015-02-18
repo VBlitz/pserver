@@ -44,7 +44,7 @@
 			<ObjectId>Purple Star</ObjectId>
 			<Damage>160</Damage>
 			<Speed>55</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="5">Blind</ConditionEffect>
 		</Projectile>
 		<Projectile id="4">
@@ -58,14 +58,14 @@
 			<ObjectId>Grey Star</ObjectId>
 			<Damage>160</Damage>
 			<Speed>45</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="3">Quiet</ConditionEffect>
 		</Projectile>
 		<Projectile id="6">
 			<ObjectId>Red Star</ObjectId>
 			<Damage>160</Damage>
 			<Speed>55</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ArmorPiercing/>
 		</Projectile>
 
@@ -272,7 +272,7 @@
 			<Damage>30</Damage>
 			<Speed>80</Speed>
 			<Size>140</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 			
@@ -304,7 +304,7 @@
 			<ObjectId>Blue Arrow</ObjectId>
 			<Damage>40</Damage>
 			<Speed>80</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>140</Size>
 			<MultiHit/>
 		</Projectile>
@@ -340,7 +340,7 @@
 			<ObjectId>Blue Arrow</ObjectId>
 			<Damage>50</Damage>
 			<Speed>80</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>140</Size>
 			<MultiHit/>
 		</Projectile>
@@ -632,14 +632,14 @@
 			<ObjectId>Bark Bolt</ObjectId>
 			<Damage>100</Damage>
 			<Speed>35</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>120</Size>
 		</Projectile>
 		<Projectile id="9">
 			<ObjectId>Bark Bolt</ObjectId>
 			<Damage>110</Damage>
 			<Speed>35</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>130</Size>
 		</Projectile>
 		
@@ -780,7 +780,7 @@
 			<ObjectId>Blue Magic</ObjectId>
 			<Damage>25</Damage>
 			<Speed>80</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>120</Size>
 			<MultiHit/>
 		</Projectile>
@@ -879,7 +879,7 @@
 			<Speed>40</Speed>
 			<Damage>75</Damage>
 			<Size>185</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 			<ConditionEffect duration="5">Weak</ConditionEffect>
 		</Projectile>		

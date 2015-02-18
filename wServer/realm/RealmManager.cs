@@ -62,7 +62,7 @@ namespace wServer.realm
             Worlds[World.ARENA] = new ArenaMap();
             Worlds[World.SHOP] = new ShopMap("Default");
             Worlds[World.MARKET] = new MarketMap();
-
+            Worlds[World.PREMIUM] = new PremiumShop();
             Monitor = new RealmPortalMonitor(Worlds[World.NEXUS_ID] as Nexus);
 
             AddWorld(GameWorld.AutoName(1, true));

@@ -15,20 +15,48 @@ namespace wServer.logic
     {
         static LootDef CommonGodSoulBag =
             new LootDef(0, 2, 0, 8,
-                Tuple.Create(0.20, (ILoot)new TierLoot(9, ItemType.Weapon)),
-                Tuple.Create(0.05, (ILoot)new TierLoot(10, ItemType.Weapon)),
-                Tuple.Create(0.03, (ILoot)new TierLoot(11, ItemType.Weapon)),
+                Tuple.Create(0.10, (ILoot)new TierLoot(7, ItemType.Weapon)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(8, ItemType.Weapon)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(9, ItemType.Weapon)),
 
-                Tuple.Create(0.20, (ILoot)new TierLoot(9, ItemType.Armor)),
-                Tuple.Create(0.10, (ILoot)new TierLoot(10, ItemType.Armor)),
-                Tuple.Create(0.05, (ILoot)new TierLoot(11, ItemType.Armor)),
-                Tuple.Create(0.03, (ILoot)new TierLoot(12, ItemType.Armor)),
+                Tuple.Create(0.10, (ILoot)new TierLoot(8, ItemType.Armor)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(9, ItemType.Armor)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(10, ItemType.Armor)),
+
+                Tuple.Create(0.15, (ILoot)new TierLoot(3, ItemType.Ring)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(4, ItemType.Ring)),
+                Tuple.Create(0.20, (ILoot)new TierLoot(4, ItemType.Ability))
+            );
+    
+        static LootDef RareGodSoulBag =
+            new LootDef(0, 2, 0, 8,
+                Tuple.Create(0.10, (ILoot)new TierLoot(8, ItemType.Weapon)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(9, ItemType.Weapon)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(10, ItemType.Weapon)),
+
+                Tuple.Create(0.10, (ILoot)new TierLoot(9, ItemType.Armor)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(10, ItemType.Armor)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(11, ItemType.Armor)),
 
                 Tuple.Create(0.15, (ILoot)new TierLoot(4, ItemType.Ring)),
                 Tuple.Create(0.05, (ILoot)new TierLoot(5, ItemType.Ring)),
                 Tuple.Create(0.20, (ILoot)new TierLoot(5, ItemType.Ability))
             );
-        const double PotProbability = 0.5; // 0.12 when complete
+        static LootDef SuperGodSoulBag =
+            new LootDef(0, 2, 0, 8,
+                Tuple.Create(0.10, (ILoot)new TierLoot(10, ItemType.Weapon)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(11, ItemType.Weapon)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(12, ItemType.Weapon)),
+
+                Tuple.Create(0.10, (ILoot)new TierLoot(11, ItemType.Armor)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(12, ItemType.Armor)),
+                Tuple.Create(0.03, (ILoot)new TierLoot(13, ItemType.Armor)),
+
+                Tuple.Create(0.15, (ILoot)new TierLoot(5, ItemType.Ring)),
+                Tuple.Create(0.05, (ILoot)new TierLoot(5, ItemType.Ability)),
+                Tuple.Create(0.20, (ILoot)new TierLoot(6, ItemType.Ability))
+            );
+        const double PotProbability = 0.10; // 0.12 when complete
 
         static _ Mountain = Behav()
             .Init(0x651, Behaves("White Demon",
@@ -39,6 +67,22 @@ namespace wServer.logic
                     Cooldown.Instance(1000, PredictiveMultiAttack.Instance(10, 15 * (float)Math.PI / 180, 3, 1)),
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(1, CommonGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Att))
+                        ))
+                    ),
+                    condBehaviors: new ConditionalBehavior[] {
+                        new DeathPortal(0x071b, 20)
+                    }
+                ))
+        	.Init(0xfe8, Behaves("Blue Demon",
+                    IfNot.Instance(
+                        Chasing.Instance(6, 9, 4, null),
+                        SimpleWandering.Instance(4)
+                    ),
+                    Cooldown.Instance(500, PredictiveMultiAttack.Instance(10, 15 * (float)Math.PI / 180, 3, 1)),
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, RareGodSoulBag),
                         Tuple.Create(360, new LootDef(0, 1, 0, 8,
                             Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Att))
                         ))
@@ -66,6 +110,31 @@ namespace wServer.logic
                         ))
                     )
                 ))
+            .Init(0x2008, Behaves("Doctor Zambarus",
+                    SimpleWandering.Instance(1),
+                    new RunBehaviors(
+                        Cooldown.Instance(1000, MultiAttack.Instance(12, 10 * (float)Math.PI / 180, 4)),
+                        Cooldown.Instance(400, PredictiveAttack.Instance(10, 1, 1)),
+                        Cooldown.Instance(1300, Rand.Instance(
+                            TossEnemy.Instance(0 * (float)Math.PI / 180, 4, 0x2009),
+                            TossEnemy.Instance(90 * (float)Math.PI / 180, 4, 0x2009),
+                            TossEnemy.Instance(180 * (float)Math.PI / 180, 4, 0x2009),
+                            TossEnemy.Instance(270 * (float)Math.PI / 180, 4, 0x2009)
+                        )),
+                        Cooldown.Instance(2000, Rand.Instance(
+                            new RandomTaunt(0.1, "How do you like my... creations?"),
+                            new RandomTaunt(0.1, "Do you dare challenge me?"),
+                            new RandomTaunt(0.1, "Zamburture Science: I do what I want, because I can."),
+                            new RandomTaunt(0.1, "My undead slaves will make short work of you!")
+                        ))
+                    ),
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, SuperGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Att))
+                        ))
+                    )
+                ))
             .Init(0x653, Behaves("Sprite Child",
                     IfNot.Instance(
                         Chasing.Instance(4, 5, 2, 0x652),
@@ -86,6 +155,22 @@ namespace wServer.logic
                     ),
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(1, CommonGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Life))
+                        ))
+                    )
+                ))
+            .Init(0xfe7, Behaves("Stone Gazer",
+                    IfNot.Instance(
+                        Chasing.Instance(6, 7, 4, null),
+                        SimpleWandering.Instance(4)
+                    ),
+                    new RunBehaviors(
+                        Cooldown.Instance(500, MultiAttack.Instance(12, 10 * (float)Math.PI / 180, 5)),
+                        Cooldown.Instance(1500, ThrowAttack.Instance(4, 8, 150))
+                    ),
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, RareGodSoulBag),
                         Tuple.Create(360, new LootDef(0, 1, 0, 8,
                             Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Life))
                         ))
@@ -117,6 +202,48 @@ namespace wServer.logic
                         Tuple.Create(1, CommonGodSoulBag),
                         Tuple.Create(360, new LootDef(0, 1, 0, 8,
                             Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Def))
+                        ))
+                    )
+                ))
+            .Init(0xfe6, Behaves("Pink Eye",
+                    IfNot.Instance(
+                        Chasing.Instance(4, 7, 4, null),
+                        SimpleWandering.Instance(4)
+                    ),
+                    new RunBehaviors(
+                        Cooldown.Instance(375, PredictiveRingAttack.Instance(5, .5f, 12, 0)),
+                        Cooldown.Instance(500, PredictiveAttack.Instance(10, 1, 1))
+                    ),
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, RareGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Def))
+                        ))
+                    )
+                ))
+            .Init(0x1961, Behaves("Glaring Eye",
+                    SmoothWandering.Instance(1.5f, 3f),
+                    new RunBehaviors(
+                        Cooldown.Instance(1000, MultiAttack.Instance(5, .5f, 25, 0, projectileIndex: 2))
+                        ),
+                    new QueuedBehavior(
+                        SpawnMinionImmediate.Instance(0x656, 1, 1, 1),
+                        SpawnMinionImmediate.Instance(0xfe6, 1, 1, 2),
+                        SpawnMinionImmediate.Instance(0x656, 1, 2, 3),
+                        CooldownExact.Instance(20000),
+                        Rand.Instance(
+                            new RandomTaunt(0.2, "While you sleep, I wait..."),
+                            new RandomTaunt(0.2, "I can see your thoughts and actions..."),
+                            new RandomTaunt(0.2, "Your crimes do not go unnoticed be my emissiaries..."),
+                            new RandomTaunt(0.2, "Even after death, I forever watch..."),
+                            new RandomTaunt(0.2, "My everlasting eyes cannot be seen or felt, yet are always there..."),
+                            new RandomTaunt(0.2, "My eyes are everywhere... You cannot escape me eternally...")
+                        )
+                    ),
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(5, SuperGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Def))
                         ))
                     )
                 ))
@@ -312,6 +439,63 @@ namespace wServer.logic
                         ))
                     )
                 ))
+             .Init(0xfe9, Behaves("Genie",
+                    HpGreaterEqual.Instance(400,
+                        new QueuedBehavior(
+                            SetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                            Timed.Instance(2500, False.Instance(Chasing.Instance(6, 7, 0, null))),
+                            UnsetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+
+                            If.Instance(IsEntityPresent.Instance(10, null),
+                                new QueuedBehavior(
+                                    Cooldown.Instance(200),
+                                    new RunBehaviors(
+                                        RingAttack.Instance(4, offset: 0 * (float)Math.PI / 180),
+                                        RingAttack.Instance(4, offset: 90 * (float)Math.PI / 180)
+                                    ),
+                                    Cooldown.Instance(200),
+                                    new RunBehaviors(
+                                        RingAttack.Instance(4, offset: 10 * (float)Math.PI / 180),
+                                        RingAttack.Instance(4, offset: 80 * (float)Math.PI / 180)
+                                    ),
+                                    Cooldown.Instance(200),
+                                    new RunBehaviors(
+                                        RingAttack.Instance(4, offset: 20 * (float)Math.PI / 180),
+                                        RingAttack.Instance(4, offset: 70 * (float)Math.PI / 180)
+                                    ),
+                                    Cooldown.Instance(200),
+                                    new RunBehaviors(
+                                        RingAttack.Instance(4, offset: 30 * (float)Math.PI / 180),
+                                        RingAttack.Instance(4, offset: 60 * (float)Math.PI / 180)
+                                    ),
+                                    Cooldown.Instance(200),
+                                    new RunBehaviors(
+                                        RingAttack.Instance(4, offset: 40 * (float)Math.PI / 180),
+                                        RingAttack.Instance(4, offset: 50 * (float)Math.PI / 180)
+                                    ),
+                                    Cooldown.Instance(250)
+                                )
+                            )
+                        )
+                    ),
+                    condBehaviors: new ConditionalBehavior[]
+                    {
+                        HpLesserCond.Instance(400,
+                            new QueuedBehavior(
+                                SetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                                Timed.Instance(1000, Flashing.Instance(1500, 0xffff0000)),
+                                RingAttack.Instance(12),
+                                Die.Instance
+                            )
+                        )
+                    },
+                    loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, RareGodSoulBag),
+                        Tuple.Create(360, new LootDef(0, 1, 0, 8,
+                            Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Spd))
+                        ))
+                    )
+                ))
             .Init(0x6d8, Behaves("Leviathan",
                     new QueuedBehavior(
                         MagicEye.Instance,
@@ -358,6 +542,436 @@ namespace wServer.logic
                         ))
                     )
                 ))
+            .Init(0x1970, Behaves("Sulthos the Snake Lord",
+                new QueuedBehavior(
+                    Once.Instance(SetState.Instance("Silver Blasts"))
+                    //Once.Instance(SetState.Instance("Cond Effects")),
+                    //new State("Cond Effects",
+                    //    new QueuedBehavior(
+                    //    Cooldown.Instance(5000),
+                    //      SetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                    //    Cooldown.Instance(5000),
+                    //      UnsetConditionEffect.Instance(ConditionEffectIndex.Invulnerable)
+                    //      )
+                    //)
+                ),
+                new RunBehaviors(
+                  new State("Silver Blasts",
+                    new QueuedBehavior(
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          SetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 45 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 90 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 135 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 180 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 225 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 270 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 315 * (float)Math.PI / 180, projectileIndex: 0),
+                          MultiAttack.Instance(15, 10 * (float)Math.PI / 180, 2, 360 * (float)Math.PI / 180, projectileIndex: 0)
+                      ),
+                      SetState.Instance("Spawn Stheno Swarm")
+                    )
+                ),
+                new State("Spawn Stheno Swarm",
+                    new RunBehaviors(
+                      SmoothWandering.Instance(2f, 3f)
+                    ),
+                    new QueuedBehavior(
+                      SetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                      SpawnMinionImmediate.Instance(0x0919, 3, 15, 15),
+                      Cooldown.Instance(250),
+                      SetState.Instance("Blind Ring Attack + ThrowAttack")
+                    )
+                ),
+                new State("Blind Ring Attack + ThrowAttack",
+                    new QueuedBehavior(
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                      	  UnsetConditionEffect.Instance(ConditionEffectIndex.Invulnerable),
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                      new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      Cooldown.Instance(500),
+                        new RunBehaviors(
+                          RingAttack.Instance(8, 10, 0, projectileIndex: 1),
+                          ThrowAttack.Instance(5, 10, 100)
+                      ),
+                      SetState.Instance("Silver Blasts")
+                      )
+                    )
+                ),
+                loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(1, SuperGodSoulBag)
+                       )
+            ))
+        	
                 .Init(0x2004, Behaves("Thunder God",
                     new RunBehaviors(
                         SimpleWandering.Instance(3),

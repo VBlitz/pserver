@@ -108,9 +108,9 @@ namespace wServer.logic
                     ),
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(800, new LootDef(0, 5, 0, 8,
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Helm of the Juggernaut")),
-                            Tuple.Create(0.1, (ILoot)new StatPotionLoot(StatPotion.Vit)),
-                            Tuple.Create(0.1, (ILoot)new StatPotionLoot(StatPotion.Wis))
+                            Tuple.Create(0.8, (ILoot)new ItemLoot("Helm of the Juggernaut")),
+                            Tuple.Create(0.3, (ILoot)new StatPotionLoot(StatPotion.Vit)),
+                            Tuple.Create(0.3, (ILoot)new StatPotionLoot(StatPotion.Wis))
                         ))
                     )
                 ))

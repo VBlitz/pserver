@@ -327,7 +327,7 @@
 			<Speed>35</Speed>
 			<Damage>100</Damage>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.5">Paralyzed</ConditionEffect>
 		</Projectile>
 	        

@@ -91,7 +91,7 @@
 			<Speed>42</Speed>
 			<Damage>65</Damage>
 			<Size>65</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 			<ConditionEffect duration="4">Weak</ConditionEffect>
 		</Projectile>
@@ -108,7 +108,7 @@
 			<Speed>60</Speed>
 			<Damage>110</Damage>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 			<ConditionEffect duration="4">Weak</ConditionEffect>
 		</Projectile>
@@ -202,7 +202,7 @@
 			<ObjectId>Fire Bolt</ObjectId>
 			<Damage>60</Damage>
 			<Speed>70</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x66e" id="Demon of the Abyss">
@@ -219,7 +219,7 @@
 			<ObjectId>Red Fire</ObjectId>
 			<Damage>120</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>140</Size>
 		</Projectile>
 	</Object>
@@ -237,7 +237,7 @@
 			<ObjectId>Red Fire</ObjectId>
 			<Damage>80</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x670" id="Demon Mage of the Abyss">
@@ -254,7 +254,7 @@
 			<ObjectId>Red Fire</ObjectId>
 			<Damage>80</Damage>
 			<Speed>80</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x671" id="Brute of the Abyss">
@@ -335,7 +335,7 @@
 			<Damage>100</Damage>
 			<LifetimeMS>1600</LifetimeMS>
    			<Size>160</Size>
-			<ConditionEffect duration=".8">Paralyzed</ConditionEffect>
+			<ConditionEffect duration=".8">Stunned</ConditionEffect>
 		</Projectile>
 		<Projectile id="3">
 			<ObjectId>Idol Blast</ObjectId>

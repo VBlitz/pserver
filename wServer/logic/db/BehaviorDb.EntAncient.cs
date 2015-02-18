@@ -343,7 +343,7 @@ namespace wServer.logic
                             Tuple.Create(0.25, (ILoot)MpPotionLoot.Instance)
                         ),
                         Tuple.Create(100, new LootDef(0, 1, 0, 8,
-                            Tuple.Create(0.001, (ILoot)new ItemLoot("Quiver of Thunder")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Quiver of Thunder")),
                             Tuple.Create(0.06, (ILoot)new ItemLoot("Tincture of Dexterity")),
                             Tuple.Create(0.06, (ILoot)new ItemLoot("Tincture of Life")),
                             Tuple.Create(0.08, (ILoot)new ItemLoot("Green Drake Egg")),

@@ -32,7 +32,7 @@ namespace wServer.logic
                             TossEnemy.Instance(90 * (float)Math.PI / 180, 4, 0x0dc1),
                             TossEnemy.Instance(180 * (float)Math.PI / 180, 4, 0x0dc1),
                             TossEnemy.Instance(270 * (float)Math.PI / 180, 4, 0x0dc1)
-                        ))
+                       ))
                     )
                 ))
             .Init(0x0dc1, Behaves("Great Snake Egg",
@@ -41,12 +41,24 @@ namespace wServer.logic
                         new Transmute(0x0dc0, 1, 2)
                     )
                 ))
-            .Init(0x0dc0, Behaves("Great Temple Snake",
-                    False.Instance(SimpleWandering.Instance(3)),
-                    new QueuedBehavior(
-                        Cooldown.Instance(1000, MultiAttack.Instance(4, 7 * (float)Math.PI / 180, 2, projectileIndex: 0)),
-                        Cooldown.Instance(1000, RingAttack.Instance(6, 4, projectileIndex: 1))
+            .Init(0x0dd3, Behaves("Jungle Fire",
+                    Cooldown.Instance(5, SimpleAttack.Instance(10, 0)),
+                    Cooldown.Instance(100, SimpleAttack.Instance(500, 1)),
+                    loot: new LootBehavior(
+                        new LootDef(0, 2, 0, 8,
+                            Tuple.Create(0.03, (ILoot)HpPotionLoot.Instance)
+                        )
                     )
+                ))
+            .Init(0x0dc0, Behaves("Great Temple Snake",
+                    IfNot.Instance(
+                        Chasing.Instance(4, 5, 2, 0x652),
+                        SimpleWandering.Instance(4)
+                    ),
+                    Cooldown.Instance(1000, PredictiveMultiAttack.Instance(10, 15 * (float)Math.PI / 180, 3, 1)),
+                    condBehaviors: new ConditionalBehavior[] {
+                        new DeathPortal(0x071b, 0)
+                    }
                 ));
     }
 }

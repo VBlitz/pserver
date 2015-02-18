@@ -344,7 +344,7 @@
 			<Speed>30</Speed>
 			<Damage>40</Damage>
 			<Size>30</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>		
 
@@ -439,7 +439,6 @@
 		<Group>Traptossers</Group>
 		<Enemy/>
 		<Class>Character</Class>
-		<Terrain>HighPlains</Terrain>
 
 			
 		<AnimatedTexture><File>chars16x16dEncounters</File><Index>9</Index></AnimatedTexture>

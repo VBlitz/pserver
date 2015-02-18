@@ -18,8 +18,8 @@ namespace wServer.logic.loot
     }
     class TierLoot : ILoot
     {
-        public static readonly int[] WeaponsT = new int[] { 1, 2, 3, 8, 17, 24, 26};
-        public static readonly int[] AbilityT = new int[] { 4, 5, 11, 12, 13, 15, 16, 18, 19, 20, 21, 22, 23, 25, 27 };
+        public static readonly int[] WeaponsT = new int[] { 1, 2, 3, 8, 17, 24, 26, 29};
+        public static readonly int[] AbilityT = new int[] { 4, 5, 11, 12, 13, 15, 16, 18, 19, 20, 21, 22, 23, 25, 27, 28 };
         public static readonly int[] ArmorsT = new int[] { 6, 7, 14, };
         public static readonly int[] RingT = new int[] { 9 };
 

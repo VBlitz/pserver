@@ -126,6 +126,7 @@
     <Compile Include="realm\worlds\BattleArena.cs" />
     <Compile Include="realm\worlds\Mine.cs" />
     <Compile Include="realm\worlds\MarketMap.cs" />
+    <Compile Include="realm\worlds\Premium.cs" />
     <Compile Include="realm\worlds\Secret.cs" />
     <Compile Include="realm\worlds\SnakePit.cs" />
     <Compile Include="realm\worlds\Island.cs" />
@@ -475,6 +476,16 @@
     <EmbeddedResource Include="realm\worlds\ghall3.wmap" />
     <EmbeddedResource Include="realm\worlds\battlearena4.wmap" />
     <EmbeddedResource Include="realm\worlds\mine.wmap" />
+    <EmbeddedResource Include="realm\worlds\nexusbeachtwo.wmap" />
+    <None Include="realm\worlds\nexusbeachcuatro.jm" />
+    <EmbeddedResource Include="realm\worlds\nexusbeachcuatro.wmap" />
+    <None Include="realm\worlds\nexusbeachtres.jm" />
+    <EmbeddedResource Include="realm\worlds\nexusbeachtres.wmap" />
+    <EmbeddedResource Include="realm\worlds\premium.wmap" />
+    <None Include="realm\worlds\nexushalloween.jm" />
+    <EmbeddedResource Include="realm\worlds\nexushalloween.wmap" />
+    <None Include="realm\worlds\UDLdos.jm" />
+    <EmbeddedResource Include="realm\worlds\UDLdos.wmap" />
     <None Include="realm\worlds\vault.jm" />
     <None Include="realm\worlds\vaultnew.wmap" />
     <EmbeddedResource Include="realm\worlds\ZombieMap.wmap" />

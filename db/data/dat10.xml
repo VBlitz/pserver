@@ -21,14 +21,14 @@
 			<Damage>80</Damage>
 			<Speed>45</Speed>
 			<Size>120</Size>
-			<LifetimeMS>300</LifetimeMS>
+			<LifetimeMS>400</LifetimeMS>
 		</Projectile>
 		<Projectile id="1">
 			<ObjectId>Pink Dot</ObjectId>
 			<Damage>70</Damage>
 			<Speed>65</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<Projectile id="2">
@@ -36,7 +36,7 @@
 			<Damage>100</Damage>
 			<Speed>55</Speed>
 			<Size>80</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<Projectile id="3">
@@ -52,7 +52,7 @@
 			<Damage>70</Damage>
 			<Speed>65</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		
@@ -125,7 +125,7 @@
 			<Damage>150</Damage>
 			<Speed>40</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="2">
 			<ObjectId>Rainbow Magic Star Super</ObjectId>
@@ -150,7 +150,7 @@
 			<Damage>100</Damage>
 			<Speed>75</Speed>
 			<Size>140</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<Projectile id="5">
@@ -158,7 +158,7 @@
 			<Damage>100</Damage>
 			<Speed>45</Speed>
 			<Size>140</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<Projectile id="6">

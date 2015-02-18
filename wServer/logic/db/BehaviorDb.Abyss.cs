@@ -64,9 +64,9 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(800, new LootDef(0, 5, 1, 2,
-                            Tuple.Create(0.005, (ILoot)new ItemLoot("Demon Blade")),
-                            Tuple.Create(0.003, (ILoot)new ItemLoot("Prism of Inception")),
-                            Tuple.Create(PotProbability, (ILoot)new StatPotionLoot(StatPotion.Vit)),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Demon Blade")),
+                            Tuple.Create(0.03, (ILoot)new ItemLoot("Prism of Inception")),
+                            Tuple.Create(5.0, (ILoot)new ItemLoot("Potion of Vitality")),
                             Tuple.Create(0.25, (ILoot)new ItemLoot("Potion of Defense"))
                         ))
                 )

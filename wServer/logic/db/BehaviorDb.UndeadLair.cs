@@ -712,8 +712,8 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(800, new LootDef(0, 5, 1, 2,
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Doom Bow")),
-                            Tuple.Create(0.005, (ILoot)new ItemLoot("Wine Cellar Incantation")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Doom Bow")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Wine Cellar Incantation")),
                             Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Wis)),
 
                             Tuple.Create(0.3, (ILoot)new TierLoot(3, ItemType.Ring)),

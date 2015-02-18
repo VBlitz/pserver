@@ -548,6 +548,8 @@ namespace wServer.realm.entities
                                 world = RealmManager.AddWorld(new MarketMap()); break;
                             case 0x195f:
                                 world = RealmManager.AddWorld(new Mine()); break;
+                            case 0x1965:
+                                world = RealmManager.AddWorld(new PremiumShop()); break;
                             default: SendError("Portal Not Implemented!"); break;
                         }
                     }

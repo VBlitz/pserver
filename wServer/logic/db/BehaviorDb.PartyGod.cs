@@ -15,7 +15,7 @@ namespace wServer.logic
     {
         static _ PartyGod = Behav()
             .Init(0x0e56, Behaves("Masked Party God",
-            Cooldown.Instance(1000, Heal.Instance(5, 25000, 0x0e56)),
+            Cooldown.Instance(1000, Heal.Instance(60, 25000, 0x0e56)),
             new QueuedBehavior(
                 HpLesser.Instance(10000,
                     new QueuedBehavior(
@@ -34,10 +34,10 @@ namespace wServer.logic
                     ),
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(100, new LootDef(0, 3, 0, 8,
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Blue Paradise")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Pink Passion Breeze")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Bahama Sunrise")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Lime Jungle Bay"))
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Blue Paradise")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Pink Passion Breeze")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Bahama Sunrise")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Lime Jungle Bay"))
                         ))
                     )
                 ));

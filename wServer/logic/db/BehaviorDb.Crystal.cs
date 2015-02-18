@@ -673,17 +673,17 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                     Tuple.Create(100, new LootDef(0, 8, 0, 8,
-                        Tuple.Create(0.01, (ILoot)new ItemLoot("Crystal Wand")),
-                        Tuple.Create(0.01, (ILoot)new ItemLoot("Crystal Sword")),
-                        Tuple.Create(0.01, (ILoot)new ItemLoot("Crystal Dagger")),
-                        Tuple.Create(0.001, (ILoot)new ItemLoot("Platinum Wand")),
-                        Tuple.Create(0.001, (ILoot)new ItemLoot("Platinum Sword")),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Att)),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Def)),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Dex)),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Spd)),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Vit)),
-                        Tuple.Create(0.5, (ILoot)new StatPotionLoot(StatPotion.Wis))
+                        Tuple.Create(0.05, (ILoot)new ItemLoot("Crystal Wand")),
+                        Tuple.Create(0.05, (ILoot)new ItemLoot("Crystal Sword")),
+                        Tuple.Create(0.05, (ILoot)new ItemLoot("Crystal Dagger")),
+                        Tuple.Create(0.02, (ILoot)new ItemLoot("Platinum Wand")),
+                        Tuple.Create(0.02, (ILoot)new ItemLoot("Platinum Sword")),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Att)),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Def)),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Dex)),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Spd)),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Vit)),
+                        Tuple.Create(0.7, (ILoot)new StatPotionLoot(StatPotion.Wis))
                         
                         )))
             ))

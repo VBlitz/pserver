@@ -24,6 +24,46 @@ namespace wServer.logic
                         )
                     )
                 ))
+            .Init(0x2005, Behaves("Zombified Patient A",
+                    IfNot.Instance(
+                        Chasing.Instance(4.5f, 6, 0, null), SimpleWandering.Instance(2)),
+                    Cooldown.Instance(1200, SimpleAttack.Instance(6)),
+                    loot: new LootBehavior(
+                        new LootDef(0, 2, 0, 8,
+                            Tuple.Create(0.1, (ILoot)HpPotionLoot.Instance)
+                        )
+                    )
+                ))
+            .Init(0x2006, Behaves("Zombified Patient B",
+                    IfNot.Instance(
+                        Chasing.Instance(4.5f, 6, 0, null), SimpleWandering.Instance(2)),
+                    Cooldown.Instance(600, SimpleAttack.Instance(6)),
+                    loot: new LootBehavior(
+                        new LootDef(0, 2, 0, 8,
+                            Tuple.Create(0.1, (ILoot)HpPotionLoot.Instance)
+                        )
+                    )
+                ))
+            .Init(0x2007, Behaves("Zombified Patient C",
+                    IfNot.Instance(
+                        Chasing.Instance(4.5f, 6, 0, null), SimpleWandering.Instance(2)),
+                    Cooldown.Instance(1800, SimpleAttack.Instance(6)),
+                    loot: new LootBehavior(
+                        new LootDef(0, 2, 0, 8,
+                            Tuple.Create(0.1, (ILoot)HpPotionLoot.Instance)
+                        )
+                    )
+                ))
+            .Init(0x2009, Behaves("BioX-032",
+                    IfNot.Instance(
+                        Chasing.Instance(3.5f, 6, 0, null), SimpleWandering.Instance(2)),
+                    Cooldown.Instance(300, SimpleAttack.Instance(4)),
+                    loot: new LootBehavior(
+                        new LootDef(0, 2, 0, 8,
+                            Tuple.Create(0.01, (ILoot)HpPotionLoot.Instance)
+                        )
+                    )
+                ))
             .Init(0x601, Behaves("Piratess",
                     IfNot.Instance(
                         Once.Instance(

@@ -141,7 +141,7 @@
 			<Speed>55</Speed>
 			<Size>240</Size>
 			<Damage>210</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 			<ConditionEffect duration="4">Weak</ConditionEffect>
 		</Projectile>
@@ -150,14 +150,14 @@
 			<Speed>85</Speed>
 			<Size>120</Size>
 			<Damage>180</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="18">					
 			<ObjectId>White Star Stunner</ObjectId>
 			<Speed>40</Speed>
 			<Size>100</Size>
 			<Damage>100</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="4">Dazed</ConditionEffect>
 			<MultiHit/>
 		</Projectile>
@@ -166,7 +166,7 @@
 			<Speed>35</Speed>
 			<Size>90</Size>
 			<Damage>100</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="3">Weak</ConditionEffect>
 			<MultiHit/>
 		</Projectile>
@@ -229,7 +229,7 @@
 			<Speed>43</Speed>
 			<Damage>70</Damage>
 			<Size>80</Size>
-			<LifetimeMS>300</LifetimeMS>
+			<LifetimeMS>400</LifetimeMS>
 			<MultiHit/>
 		</Projectile>
 		<Projectile id="1">
@@ -432,7 +432,7 @@
 			<ObjectId>Violet Missile</ObjectId>
 			<Damage>60</Damage>
 			<Speed>100</Speed>
-			<LifetimeMS>300</LifetimeMS>
+			<LifetimeMS>400</LifetimeMS>
 			<Size>90</Size>
 		</Projectile>
 

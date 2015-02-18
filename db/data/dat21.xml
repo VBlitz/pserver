@@ -10,7 +10,7 @@
 			<ObjectId>Green Blob</ObjectId>
 			<Speed>40</Speed>
 			<Damage>5</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 	</Object>
@@ -24,7 +24,7 @@
 			<ObjectId>Green Blob</ObjectId>
 			<Speed>40</Speed>
 			<Damage>5</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 	</Object>
@@ -38,7 +38,7 @@
 			<ObjectId>Green Blob</ObjectId>
 			<Speed>40</Speed>
 			<Damage>5</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 	</Object>
@@ -52,7 +52,7 @@
 			<ObjectId>Green Blob</ObjectId>
 			<Speed>40</Speed>
 			<Damage>5</Damage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 	</Object>

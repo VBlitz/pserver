@@ -23,11 +23,11 @@ namespace wServer.logic
                         ),
                         loot: new LootBehavior(LootDef.Empty,
                        Tuple.Create(100, new LootDef(0, 5, 0, 10,
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Spirit Dagger")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Spectral Cloth Armor")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Ghostly Prism")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Spirit Dagger")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Spectral Cloth Armor")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ghostly Prism")),
                             Tuple.Create(0.99, (ILoot)new ItemLoot("Potion of Wisdom")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Captain's Ring"))
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Captain's Ring"))
                             ))
                         ))
 

@@ -31,12 +31,12 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(800, new LootDef(0, 5, 0, 3,
-                            Tuple.Create(0.005, (ILoot)new ItemLoot("Coral Bow")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Coral Silk Armor")),
-                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Ring")),
-                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Venom Trap")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Coral Juice")),
-                            Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Mana))
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Bow")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Coral Silk Armor")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Ring")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Venom Trap")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Juice")),
+                            Tuple.Create(5.0, (ILoot)new ItemLoot("Potion of Mana"))
                         ))
                 ),
                 condBehaviors: new ConditionalBehavior[]
@@ -104,12 +104,58 @@ namespace wServer.logic
             .Init(0x1705, Behaves("Coral Gift",
                 loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(800, new LootDef(0, 5, 0, 3,
-                            Tuple.Create(0.005, (ILoot)new ItemLoot("Coral Bow")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Coral Silk Armor")),
-                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Ring")),
-                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Venom Trap")),
-                            Tuple.Create(0.1, (ILoot)new ItemLoot("Coral Juice")),
-                            Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Mana))
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Coral Bow")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Coral Silk Armor")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Ring")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Venom Trap")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Coral Juice")),
+                            Tuple.Create(0.99, (ILoot)new StatPotionLoot(StatPotion.Mana))
+                        ))
+                )
+            ))
+            .Init(0xfeb, Behaves("Super Gift",
+                loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(800, new LootDef(0, 5, 0, 3,
+                            Tuple.Create(0.025, (ILoot)new TierLoot(8, ItemType.Ability)),
+                            Tuple.Create(0.05, (ILoot)new TierLoot(7, ItemType.Ability)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(6, ItemType.Ability)),
+                            Tuple.Create(0.025, (ILoot)new TierLoot(15, ItemType.Armor)),
+                            Tuple.Create(0.05, (ILoot)new TierLoot(14, ItemType.Armor)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(13, ItemType.Armor)),
+                            Tuple.Create(0.025, (ILoot)new TierLoot(14, ItemType.Weapon)),
+                            Tuple.Create(0.05, (ILoot)new TierLoot(13, ItemType.Weapon)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(12, ItemType.Weapon)),
+                            Tuple.Create(0.5, (ILoot)new TierLoot(5, ItemType.Ring)),
+                            
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Staff of Unlimited Patience")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Bow of Opulence")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Robe of the Wise Magician")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Robe of the Ancient Battlemage")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Staff of Imminent Doom")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Tattered Robe"))
+                        ))
+                )
+            ))
+            .Init(0xfec, Behaves("Hyper Gift",
+                loot: new LootBehavior(LootDef.Empty,
+                        Tuple.Create(800, new LootDef(0, 5, 0, 3,
+                            Tuple.Create(0.05, (ILoot)new TierLoot(8, ItemType.Ability)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(7, ItemType.Ability)),
+                            Tuple.Create(0.2, (ILoot)new TierLoot(6, ItemType.Ability)),
+                            Tuple.Create(0.05, (ILoot)new TierLoot(15, ItemType.Armor)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(14, ItemType.Armor)),
+                            Tuple.Create(0.2, (ILoot)new TierLoot(13, ItemType.Armor)),
+                            Tuple.Create(0.05, (ILoot)new TierLoot(14, ItemType.Weapon)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(13, ItemType.Weapon)),
+                            Tuple.Create(0.2, (ILoot)new TierLoot(12, ItemType.Weapon)),
+                            Tuple.Create(0.5, (ILoot)new TierLoot(5, ItemType.Ring)),
+                            
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Staff of Unlimited Patience")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Bow of Opulence")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Robe of the Wise Magician")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Robe of the Ancient Battlemage")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Staff of Imminent Doom")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Tattered Robe"))
                         ))
                 )
             ))

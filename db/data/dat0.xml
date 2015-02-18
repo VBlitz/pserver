@@ -496,7 +496,7 @@
 			<ObjectId>Red Fire</ObjectId>
 			<Damage>17</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 
 

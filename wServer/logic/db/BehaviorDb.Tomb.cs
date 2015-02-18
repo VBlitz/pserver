@@ -82,12 +82,12 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(100, new LootDef(0, 5, 0, 8,
-                            Tuple.Create(0.25, (ILoot)new StatPotionLoot(StatPotion.Life)),
+                            Tuple.Create(5.0, (ILoot)new StatPotionLoot(StatPotion.Life)),
 
-                            Tuple.Create(0.002, (ILoot)new ItemLoot("Tome of Holy Protection")),
-                            Tuple.Create(0.002, (ILoot)new ItemLoot("Ring of the Pyramid")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
-                            Tuple.Create(0.001, (ILoot)new ItemLoot("Mithril Sword"))
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Tome of Holy Protection")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ring of the Pyramid")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Mithril Sword"))
                 )))
 
                 ))
@@ -125,6 +125,7 @@ namespace wServer.logic
                 )
             ))
             .Init(0x0d26, Behaves("Nut",
+        	    Once.Instance(new SimpleTaunt("YOU IMPUDENT BRATS!")),
                 new RunBehaviors(
                         HpGreaterEqual.Instance(5000,
                             new RunBehaviors(
@@ -174,11 +175,11 @@ namespace wServer.logic
                     ),
                     loot: new LootBehavior(LootDef.Empty,
                             Tuple.Create(100, new LootDef(0, 2, 0, 2,
-                            Tuple.Create(0.009, (ILoot)new ItemLoot("Ring of the Sphinx")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
-                            Tuple.Create(0.005, (ILoot)new ItemLoot("Wine Cellar Incantation")),
-                            Tuple.Create(1.00, (ILoot)new ItemLoot("Potion of Life")),
-                            Tuple.Create(0.009, (ILoot)new ItemLoot("Miasma Poison"))
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ring of the Sphinx")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
+                            Tuple.Create(0.05, (ILoot)new ItemLoot("Wine Cellar Incantation")),
+                            Tuple.Create(5.00, (ILoot)new ItemLoot("Potion of Life")),
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Miasma Poison"))
 
                     )))
             ))
@@ -191,6 +192,7 @@ namespace wServer.logic
                 )
             ))
             .Init(0x0d27, Behaves("Geb",
+                Once.Instance(new SimpleTaunt("YOU HAVE AWOKEN US!")),
                 new RunBehaviors(
                         HpGreaterEqual.Instance(9000, //If his HP is greater than 9000 (rage),
                             new RunBehaviors(
@@ -242,10 +244,10 @@ namespace wServer.logic
                         ),
                         loot: new LootBehavior(LootDef.Empty, //Class for loot.
                           Tuple.Create(100, new LootDef(0, 2, 0, 2,
-                            Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Life)),
+                            Tuple.Create(5.0, (ILoot)new StatPotionLoot(StatPotion.Life)),
                             Tuple.Create(0.015, (ILoot)new ItemLoot("Wine Cellar Incantation")),
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
-                            Tuple.Create(0.05, (ILoot)new ItemLoot("Ring of the Nile"))
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Ring of the Blood Harvest")),
+                            Tuple.Create(0.5, (ILoot)new ItemLoot("Ring of the Nile"))
                             ))
                         )
                 ))

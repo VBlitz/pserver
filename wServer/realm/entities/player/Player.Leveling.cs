@@ -26,7 +26,7 @@ namespace wServer.realm.entities
             else if (fame >= 800) return 2000;
             else if (fame >= 400) return 800;
             else if (fame >= 150) return 400;
-            else if (fame >= 20) return 150;
+            else if (fame >= 10) return 150;
             else return 20;
         }
 
@@ -64,7 +64,7 @@ namespace wServer.realm.entities
             { "Horned Drake",               Tuple.Create(8, 7, 30) },
 
             { "Deathmage",                  Tuple.Create(5, 6, 11) },
-            { "Great Coil Snake",           Tuple.Create(6, 6, 12) },
+            { "Great Coil Snake",           Tuple.Create(6, 6, 20) },
             { "Lich",                       Tuple.Create(8, 6, 30) },
             { "Actual Lich",                Tuple.Create(8, 7, 30) },
             { "Ent Ancient",                Tuple.Create(9, 7, 30) },
@@ -77,6 +77,7 @@ namespace wServer.realm.entities
             { "Red Demon",                  Tuple.Create(14,15, 30) },
 
             { "Skull Shrine",               Tuple.Create(13,15, 30) },
+            { "Glaring Eye",               Tuple.Create(13,15, 30) },
             { "Pentaract",                  Tuple.Create(13,15, 30) },
             { "Cube God",                   Tuple.Create(13,15, 30) },
             { "Grand Sphinx",               Tuple.Create(13,15, 30) },
@@ -167,8 +168,8 @@ namespace wServer.realm.entities
         void CalculateFame()
         {
             int newFame = 0;
-            if (Experience < 200 * 1000) newFame = Experience / 1000;
-            else newFame = 200 + (Experience - 200 * 1000) / 1000;
+            if (Experience < 200 * 1000) newFame = Experience / 100;
+            else newFame = Experience / 100;
             if (newFame != Fame)
             {
                 Owner.BroadcastPacket(new NotificationPacket()

@@ -68,7 +68,7 @@
 			<ObjectId>Blue Magic</ObjectId>
 			<Damage>20</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x65e" id="Skeleton King">
@@ -86,7 +86,7 @@
 			<ObjectId>Blue Bolt</ObjectId>
 			<Damage>15</Damage>
 			<Speed>70</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x65f" id="Mummy">
@@ -104,7 +104,7 @@
 			<ObjectId>Green Magic</ObjectId>
 			<Damage>30</Damage>
 			<Speed>70</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x660" id="Mummy King">
@@ -140,7 +140,7 @@
 			<ObjectId>Green Magic</ObjectId>
 			<Damage>40</Damage>
 			<Speed>70</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x662" id="Ghost Archer">
@@ -158,7 +158,7 @@
 			<ObjectId>Blue Arrow</ObjectId>
 			<Damage>30</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x663" id="Ghost Warrior">
@@ -194,7 +194,7 @@
 			<ObjectId>Blue Bolt</ObjectId>
 			<Damage>40</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x665" id="Ghost Rogue">
@@ -272,7 +272,7 @@
 			<ObjectId>Pink Bolt</ObjectId>
 			<Damage>100</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>120</Size>
 		</Projectile>
 		<Projectile id="1">
@@ -306,7 +306,7 @@
 			<ObjectId>Fire Bolt</ObjectId>
 			<Damage>40</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 	</Object>
 	<Object type="0x66a" id="Demon">
@@ -452,7 +452,7 @@
 			<Damage>8</Damage>
 			<Speed>20</Speed>
 			<Size>90</Size>
-			<LifetimeMS>300</LifetimeMS>
+			<LifetimeMS>400</LifetimeMS>
 		</Projectile>
 		<Projectile id="1">
 			<ObjectId>Beam</ObjectId>

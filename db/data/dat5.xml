@@ -216,7 +216,7 @@
 			<ObjectId>Blue Magic</ObjectId>
 			<Damage>60</Damage>
 			<Speed>40</Speed>
-			<LifetimeMS>3000</LifetimeMS>		
+			<LifetimeMS>4000</LifetimeMS>		
 			<Wavy/>	
 		</Projectile>
 				
@@ -224,7 +224,7 @@
 			<ObjectId>Blue Missile</ObjectId>
 			<Damage>100</Damage>
 			<Speed>40</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.2">Weak</ConditionEffect>
 			<MultiHit/>
 		</Projectile>	
@@ -233,7 +233,7 @@
 			<ObjectId>Blue Magic</ObjectId>
 			<Damage>60</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>		
+			<LifetimeMS>4000</LifetimeMS>		
 			<Wavy/>	
 		</Projectile>
 				
@@ -241,7 +241,7 @@
 			<ObjectId>Blue Missile</ObjectId>
 			<Damage>100</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.2">Weak</ConditionEffect>
 			<MultiHit/>
 		</Projectile>
@@ -537,7 +537,7 @@
 			<Damage>190</Damage>
 			<Speed>40</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		
 		
@@ -559,7 +559,7 @@
 			<Damage>190</Damage>
 			<Speed>40</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		
 		
@@ -581,7 +581,7 @@
 			<Damage>190</Damage>
 			<Speed>40</Speed>
 			<Size>120</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		
 		
@@ -1260,7 +1260,7 @@
 			<Speed>40</Speed>
 			<MinDamage>10</MinDamage>
 			<MaxDamage>100</MaxDamage>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.4">Paralyzed</ConditionEffect>
 			<MultiHit/>
 		</Projectile>
@@ -1474,7 +1474,7 @@
 			<ObjectId>Violet Missile</ObjectId>
 			<Damage>100</Damage>
 			<Speed>60</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>100</Size>
 		</Projectile>
 		
@@ -1482,7 +1482,7 @@
 			<ObjectId>Violet Missile</ObjectId>
 			<Damage>140</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>120</Size>
 		</Projectile>	
 		
@@ -1542,7 +1542,7 @@
 			<ObjectId>Black Arrow</ObjectId>
 			<Damage>100</Damage>
 			<Speed>50</Speed>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<Size>140</Size>
 			<MultiHit/>
 			<ConditionEffect duration="1.2">Paralyzed</ConditionEffect>

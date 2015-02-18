@@ -34,31 +34,31 @@ namespace wServer.logic
                     ),
                     loot: new LootBehavior(LootDef.Empty,
                         Tuple.Create(100, new LootDef(0, 3, 0, 8,
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Orb of Conflict")),
+                            Tuple.Create(0.2, (ILoot)new ItemLoot("Orb of Conflict")),
 
-                            Tuple.Create(0.01, (ILoot)new TierLoot(11, ItemType.Weapon)),
-                            Tuple.Create(0.01, (ILoot)new TierLoot(11, ItemType.Armor)),
-                            Tuple.Create(0.01, (ILoot)new TierLoot(5, ItemType.Ring)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(11, ItemType.Weapon)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(11, ItemType.Armor)),
+                            Tuple.Create(0.1, (ILoot)new TierLoot(5, ItemType.Ring)),
 
-                            Tuple.Create(0.02, (ILoot)new TierLoot(10, ItemType.Weapon)),
-                            Tuple.Create(0.02, (ILoot)new TierLoot(10, ItemType.Armor)),
+                            Tuple.Create(0.2, (ILoot)new TierLoot(10, ItemType.Weapon)),
+                            Tuple.Create(0.2, (ILoot)new TierLoot(10, ItemType.Armor)),
 
-                            Tuple.Create(0.03, (ILoot)new TierLoot(9, ItemType.Weapon)),
-                            Tuple.Create(0.03, (ILoot)new TierLoot(5, ItemType.Ability)),
-                            Tuple.Create(0.03, (ILoot)new TierLoot(9, ItemType.Armor)),
+                            Tuple.Create(0.3, (ILoot)new TierLoot(9, ItemType.Weapon)),
+                            Tuple.Create(0.3, (ILoot)new TierLoot(5, ItemType.Ability)),
+                            Tuple.Create(0.3, (ILoot)new TierLoot(9, ItemType.Armor)),
 
                             //Tuple.Create(0.05, (ILoot)new StatPotionsLoot(1, 2)),
-                            Tuple.Create(0.05, (ILoot)new TierLoot(4, ItemType.Ring)),
+                            Tuple.Create(0.5, (ILoot)new TierLoot(4, ItemType.Ring)),
 
-                            Tuple.Create(0.1, (ILoot)new TierLoot(4, ItemType.Ability)),
-                            Tuple.Create(0.1, (ILoot)new TierLoot(8, ItemType.Armor)),
+                            Tuple.Create(0.5, (ILoot)new TierLoot(4, ItemType.Ability)),
+                            Tuple.Create(0.5, (ILoot)new TierLoot(8, ItemType.Armor)),
 
-                            Tuple.Create(0.2, (ILoot)new TierLoot(8, ItemType.Weapon)),
-                            Tuple.Create(0.2, (ILoot)new TierLoot(7, ItemType.Armor)),
-                            Tuple.Create(0.2, (ILoot)new TierLoot(3, ItemType.Ring))
+                            Tuple.Create(0.7, (ILoot)new TierLoot(8, ItemType.Weapon)),
+                            Tuple.Create(0.7, (ILoot)new TierLoot(7, ItemType.Armor)),
+                            Tuple.Create(0.7, (ILoot)new TierLoot(3, ItemType.Ring))
                         )),
                         Tuple.Create(100, new LootDef(1, 3, 1, 3,
-                            Tuple.Create(0.05, (ILoot)new StatPotionsLoot(1, 2))
+                            Tuple.Create(0.5, (ILoot)new StatPotionsLoot(1, 2))
                         ))
                     )
                 ))

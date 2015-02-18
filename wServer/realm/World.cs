@@ -27,7 +27,7 @@ namespace wServer.realm
         public const int SHOP = -10;
         public const int GHALL = -11;
         public const int MARKET = -12;
-
+        public const int PREMIUM = -13;
         protected World()
         {
             Players = new ConcurrentDictionary<int, Player>();

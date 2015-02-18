@@ -12,7 +12,7 @@ using wServer.logic.cond;
 namespace wServer.logic
 {
     partial class BehaviorDb
-    {
+    {        
         static _ SnakePit = Behav()
             /*.Init(0x0917, Behaves("Stheno the Snake Queen",
                 new RunBehaviors(
@@ -216,13 +216,13 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                   Tuple.Create(100, new LootDef(0, 2, 2, 8,
-                    Tuple.Create(0.01, (ILoot)new ItemLoot("Wand of the Bulwark")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Skin Armor")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Skin Shield")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Eye Ring")),
+                    Tuple.Create(0.05, (ILoot)new ItemLoot("Wand of the Bulwark")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Skin Armor")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Skin Shield")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Eye Ring")),
                     Tuple.Create(0.01, (ILoot)new ItemLoot("Wine Cellar Incantation")),
-                    Tuple.Create(0.8, (ILoot)new StatPotionLoot(StatPotion.Spd)),
-                    Tuple.Create(0.1, (ILoot)new StatPotionLoot(StatPotion.Def)),
+                    Tuple.Create(1.0, (ILoot)new ItemLoot("Potion of Speed")),
+                    Tuple.Create(1.0, (ILoot)new ItemLoot("Potion of Speed")),
                     Tuple.Create(0.2, (ILoot)new TierLoot(9, ItemType.Weapon)),
                     Tuple.Create(0.1, (ILoot)new TierLoot(10, ItemType.Weapon)),
                     Tuple.Create(0.3, (ILoot)new TierLoot(8, ItemType.Armor)),
@@ -230,6 +230,7 @@ namespace wServer.logic
                     Tuple.Create(0.1, (ILoot)new TierLoot(10, ItemType.Armor))
                     )))
             ))
+
             .Init(0x0e26, Behaves("Snakepit Guard",
                 SetSize.Instance(100),
                 SmoothWandering.Instance(2f, 2f),
@@ -242,10 +243,10 @@ namespace wServer.logic
                 ),
                 loot: new LootBehavior(LootDef.Empty,
                   Tuple.Create(100, new LootDef(0, 2, 2, 8,
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Wand of the Bulwark")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Skin Armor")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Skin Shield")),
-                    Tuple.Create(0.05, (ILoot)new ItemLoot("Snake Eye Ring")),
+                    Tuple.Create(0.1, (ILoot)new ItemLoot("Wand of the Bulwark")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Skin Armor")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Skin Shield")),
+                    Tuple.Create(0.5, (ILoot)new ItemLoot("Snake Eye Ring")),
                     Tuple.Create(0.05, (ILoot)new ItemLoot("Wine Cellar Incantation")),
                     Tuple.Create(1.0, (ILoot)new StatPotionLoot(StatPotion.Spd)),
                     Tuple.Create(0.1, (ILoot)new StatPotionLoot(StatPotion.Def)),
@@ -268,7 +269,8 @@ namespace wServer.logic
                   Chasing.Instance(4, 100, 2, 0x0917),
                   SimpleWandering.Instance(4)
                   ),
-                  Cooldown.Instance(1000, SimpleAttack.Instance(20, projectileIndex: 0))
+                  Cooldown.Instance(1000, SimpleAttack.Instance(20, projectileIndex: 0)),
+                  Cooldown.Instance(500, ThrowAttack.Instance(4, 8, 50))
             ))
             .Init(0x0223, Behaves("Pit Snake",
                 SimpleWandering.Instance(8),

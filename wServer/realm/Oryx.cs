@@ -146,7 +146,11 @@ namespace wServer.realm
                     Tuple.Create("Rock Bot", 0.05),
                     Tuple.Create("Thunder God", 0.07),
                     Tuple.Create("Djinn", 0.09),
-                    //Tuple.Create("Leviathan", 0.09)
+                    Tuple.Create("Pink Eye", 0.02),
+                    Tuple.Create("Stone Gazer", 0.02),
+                    Tuple.Create("Blue Demon", 0.02),
+                    Tuple.Create("Genie", 0.02),
+                    Tuple.Create("Leviathan", 0.09)
                 })
             },
             { WmapTerrain.BeachTowels, Tuple.Create(
@@ -534,6 +538,26 @@ namespace wServer.realm
                     "{PLAYER}, you foul ruffian! Do not think I forget your defiling of my Grand Sphinx!"
                 }
             }),
+            Tuple.Create("Glaring Eye", new TauntData()
+            {
+                spawn = new string[] {
+                    "The powerful Glaring Eye will see to your demise",
+                    "Foolish miscreants, a Glaring Eye watches your crimes and will obliterate you."
+                },
+                numberOfEnemies = new string[] {
+                    "My (COUNT) Glaring Eyes will never stop watching you.",
+                    "An army of {COUNT} Glaring Eyes will punish you for your impudence!",
+                    "My Glaring Eyes will watch you suffer even after death."
+                },
+                final = new string[] {
+                    "A Glaring Eye will make you reconsider your chances of living!",
+                    "Lgare back at my final Glaring Eye, and it will destroy you."
+                },
+                killed = new string[] {
+                    "You shall pay, {PLAYER}! My Glaring Eyes are forever watching!",
+                    "(PLAYER), you impudent cur! You shall recieve an much worse death for defeated my Glaring Eye!"
+                }
+            }),
             Tuple.Create("Lord of the Lost Lands", new TauntData()
             {
                 spawn = new string[] {
@@ -686,6 +710,7 @@ namespace wServer.realm
             //Tuple.Create("Hermit God", (ISetPiece)new Sphinx()),
             //Tuple.Create("Ghost Ship", (ISetPiece)new Sphinx()),
             Tuple.Create("Cube God", (ISetPiece) new CubeGod()),
+            Tuple.Create("Glaring Eye", (ISetPiece) new SkullShrine()),
         };
         public void OnEnemyKilled(Enemy enemy, Player killer)
         {

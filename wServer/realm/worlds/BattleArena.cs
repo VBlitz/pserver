@@ -35,11 +35,11 @@ namespace wServer.realm.worlds
 
             RandomizedEnemies = new string[] { 
                 "Leviathan", "Archdemon Malphas", "Stheno the Snake Queen", "Rock Bot", "Slime God", "Beholder", "Flying Brain", 
-                "White Demon", "Henchman of Oryx", "Tomb Support", "Tomb Defender", "Lizard God", 
+                "White Demon", "Henchman of Oryx", "Hyper Gift", "Coral Gift", "Lizard God", 
                 "Thessal the Mermaid Goddess", "Ent Ancient", "Reaper of Doom", "Leviathan", "Phoenix Lord",
                 "Leviathan", "Red Demon", "Lizard God", "Beholder", "Slime God", "Flying Brain", "White Demon", "Beholder", 
-                "Crystal Prisoner", "Davy Jones", "Oryx the Mad God 2", "Sprite God", "Sprite God", "Djinn", 
-                "Djinn", "Thunder God", "Tomb Attacker", "Henchman of Oryx", "Septavius the Ghost God", "Knight of the Void" };
+                "Crystal Prisoner", "Davy Jones", "Limon the Sprite God", "Sprite God", "Djinn", 
+                "Djinn", "Thunder God", "Super Gift", "Henchman of Oryx", "Septavius the Ghost God", "Stone Gazer", "Pink Eye", "Blue Demon", "Genie" };
         }
 
         public bool OutOfBounds(float x, float y)

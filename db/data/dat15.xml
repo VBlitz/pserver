@@ -155,21 +155,21 @@
 	        <Speed>70</Speed>
 	        <Damage>65</Damage>
 	        <Size>100</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="2">
 			<ObjectId>Super Trident</ObjectId>
 	        <Speed>60</Speed>
 	        <Damage>100</Damage>
 	        <Size>110</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="3">
 			<ObjectId>Yellow Wall</ObjectId>
 	        <Speed>60</Speed>
 	        <Damage>120</Damage>
 	        <Size>160</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		
 	
@@ -242,21 +242,21 @@
 	        <Speed>70</Speed>
 	        <Damage>65</Damage>
 	        <Size>100</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="2">
 			<ObjectId>Super Trident</ObjectId>
 	        <Speed>60</Speed>
 	        <Damage>100</Damage>
 	        <Size>110</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		<Projectile id="3">
 			<ObjectId>Yellow Wall</ObjectId>
 	        <Speed>60</Speed>
 	        <Damage>120</Damage>
 	        <Size>160</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 		</Projectile>
 		
 	        
@@ -356,7 +356,7 @@
 	        <Speed>70</Speed>
 	        <Damage>65</Damage>
 	        <Size>100</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.8">Confused</ConditionEffect>
 		</Projectile>
 		
@@ -426,7 +426,7 @@
 	        <Speed>35</Speed>
 	        <Damage>100</Damage>
 	        <Size>120</Size>
-	        <LifetimeMS>3000</LifetimeMS>
+	        <LifetimeMS>4000</LifetimeMS>
 			<ConditionEffect duration="1.6">Paralyzed</ConditionEffect>
 		</Projectile>
 		
@@ -488,7 +488,7 @@
             <Speed>0</Speed>
             <Damage>85</Damage>
             <Size>80</Size>
-            <LifetimeMS>3000</LifetimeMS>
+            <LifetimeMS>4000</LifetimeMS>
             <MultiHit/>
         </Projectile>
         <Projectile id="1">

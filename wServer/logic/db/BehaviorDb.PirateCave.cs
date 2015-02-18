@@ -42,7 +42,7 @@ namespace wServer.logic
                             Tuple.Create(0.4, (ILoot)new TierLoot(4, ItemType.Weapon))
                             ),
                             Tuple.Create(100, new LootDef(0, 1, 0, 2,
-                            Tuple.Create(0.01, (ILoot)new ItemLoot("Pirate Rum"))
+                            Tuple.Create(0.1, (ILoot)new ItemLoot("Pirate Rum"))
                             )))
             ))
             .Init(0x687, Behaves("Cave Pirate Brawler",

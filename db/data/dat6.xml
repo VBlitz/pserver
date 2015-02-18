@@ -361,7 +361,7 @@
 			<Speed>15</Speed>
 			<Damage>4</Damage>
 			<Size>80</Size>
-			<LifetimeMS>3000</LifetimeMS>
+			<LifetimeMS>4000</LifetimeMS>
 			<MultiHit/>
 			<Wavy/>
 		</Projectile>
